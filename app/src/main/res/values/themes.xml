@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.BudgetOCR" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary (Indigo) -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/accent_bg</item>
+        <item name="colorOnPrimaryContainer">@color/primary_dark</item>
+
+        <!-- Secondary (Emerald) -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/income_bg</item>
+        <item name="colorOnSecondaryContainer">@color/income_green</item>
+
+        <!-- Tertiary (Expense Red) -->
+        <item name="colorTertiary">@color/expense_red</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/expense_bg</item>
+
+        <!-- Background & Surface -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Outline / Divider -->
+        <item name="colorOutline">@color/border</item>
+        <item name="colorOutlineVariant">@color/divider</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/expense_red</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Status bar — transparent, icon color set by windowLightStatusBar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/surface</item>
+
+        <!-- Material3 TextInputLayout style -->
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
+
+        <!-- Bottom navigation -->
+        <item name="bottomNavigationStyle">@style/Widget.BudgetOCR.BottomNavigation</item>
+    </style>
+
+    <!-- Bottom Navigation: no active indicator pill, clean look -->
+    <style name="Widget.BudgetOCR.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="labelVisibilityMode">labeled</item>
+    </style>
+
+    <!-- Dialog style — rounded corners, themed surface -->
+    <style name="Theme.BudgetOCR.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.BudgetOCR.Dialog</item>
+    </style>
+
+    <style name="ShapeAppearance.BudgetOCR.Dialog" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <!-- Chip style -->
+    <style name="Widget.BudgetOCR.Chip.Filter" parent="Widget.Material3.Chip.Filter">
+        <item name="chipCornerRadius">20dp</item>
+    </style>
+</resources>

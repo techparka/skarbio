@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="icon_size_sm">24dp</dimen>
+    <dimen name="icon_size_md">40dp</dimen>
+    <dimen name="icon_size_lg">48dp</dimen>
+    <dimen name="emoji_cell_size">40dp</dimen>
+    <dimen name="color_swatch_size">36dp</dimen>
+    <dimen name="color_swatch_margin">4dp</dimen>
+</resources>

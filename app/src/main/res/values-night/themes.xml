@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Dark theme overrides — colors come from values-night/colors.xml automatically.
+         Only need to override attributes that differ structurally from the light theme. -->
+    <style name="Theme.BudgetOCR" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary (lighter indigo for dark bg) -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/accent_bg</item>
+        <item name="colorOnPrimaryContainer">@color/primary_light</item>
+
+        <!-- Secondary (bright emerald) -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/income_bg</item>
+        <item name="colorOnSecondaryContainer">@color/income_green</item>
+
+        <!-- Tertiary -->
+        <item name="colorTertiary">@color/expense_red</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">@color/expense_bg</item>
+
+        <!-- Background & Surface -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+
+        <!-- Outline -->
+        <item name="colorOutline">@color/border</item>
+        <item name="colorOutlineVariant">@color/divider</item>
+
+        <!-- Error -->
+        <item name="colorError">@color/expense_red</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Status bar — dark icons NOT wanted in dark mode -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/surface</item>
+
+        <!-- Styles -->
+        <item name="textInputStyle">@style/Widget.Material3.TextInputLayout.OutlinedBox</item>
+        <item name="bottomNavigationStyle">@style/Widget.BudgetOCR.BottomNavigation</item>
+    </style>
+</resources>

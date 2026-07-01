@@ -1,0 +1,82 @@
+{
+  "GROCERIES": [
+    "biedronka", "lidl", "dino", "kaufland", "aldi", "netto",
+    "auchan", "carrefour", "tesco", "e.leclerc", "intermarche",
+    "żabka", "zabka", "żappka", "zappka", "freshmarket", "abc", "groszek", "lewiatan",
+    "delikatesy centrum", "odido", "polomarket", "stokrotka",
+    "real", "makro", "selgros", "eurocash", "bi1",
+    "społem", "spolem", "piotr i paweł", "alma"
+  ],
+  "FUEL": [
+    "orlen", "bp", "shell", "lotos", "circle k",
+    "moya", "avia", "total", "statoil", "lukoil",
+    "bliska", "tankujemy"
+  ],
+  "HEALTH": [
+    "apteka", "doz", "gemini", "dbam o zdrowie",
+    "ziko", "melissa", "remedium", "super-pharm",
+    "hebe", "rossmann"
+  ],
+  "RESTAURANT": [
+    "mcdonald", "kfc", "burger king", "subway", "pizza hut",
+    "dominos", "papa johns", "north fish", "kebab", "zapiekanka",
+    "costa coffee", "starbucks", "green caffè nero", "caffè nero",
+    "coffeeheaven", "coffee heaven", "mccafe",
+    "restauracja", "bar", "pizzeria", "sushi", "grill bar",
+    "jadłodajnia", "milk bar", "bistro",
+    "glovo", "uber eats", "pyszne.pl", "pyszne", "wolt"
+  ],
+  "CLOTHING": [
+    "reserved", "h&m", "zara", "cropp", "house",
+    "mohito", "sinsay", "c&a", "tkmaxx", "pepco",
+    "smyk", "answear", "eobuwie", "ccc", "deichmann",
+    "nike", "adidas", "decathlon", "go sport", "4f",
+    "zalando", "halfprice", "shein", "temu"
+  ],
+  "ELECTRONICS": [
+    "media markt", "mediamarkt", "euro", "rtv euro agd",
+    "komputronik", "x-kom", "media expert", "neonet",
+    "electro", "avans", "saturn", "empik",
+    "morele.net", "morele"
+  ],
+  "ENTERTAINMENT": [
+    "cinema city", "multikino", "helios", "kinoteka",
+    "empik", "merlin", "legendia", "energylandia",
+    "zoo", "planetarium", "muzeum", "teatr", "opera"
+  ],
+  "TRANSPORT": [
+    "pkp", "koleje", "flixbus", "polskibus", "uber",
+    "bolt", "freenow", "mpk", "ztm", "metro", "tramwaj",
+    "bilet", "ticket", "parking", "autopay", "epass24",
+    "inpost"
+  ],
+  "BILLS": [
+    "pge", "tauron", "enea", "energa", "pgnig",
+    "orange", "play", "plus", "t-mobile", "vectra",
+    "netia", "multimedia", "canal+", "netflix", "spotify",
+    "czynsz", "opłata", "rachunek", "faktura"
+  ],
+  "BEAUTY": [
+    "rossmann", "hebe", "sephora", "douglas",
+    "super-pharm", "drogeria", "fryzjer", "salon",
+    "kosmetyczka", "barbershop", "spa", "wellness",
+    "notino", "rituals"
+  ],
+  "HOME": [
+    "castorama", "leroy merlin", "obi", "bricomarche",
+    "praktiker", "ikea", "jysk", "agata", "black red white",
+    "home&you", "pepco"
+  ],
+  "PETS": [
+    "kakadu", "maxi zoo", "zoo", "sklep zoologiczny",
+    "psi", "kot", "weterynar", "lecznica"
+  ],
+  "EDUCATION": [
+    "empik", "matras", "księgarnia", "szkoła", "uczelnia",
+    "kurs", "szkolenie", "korepetycje"
+  ],
+  "GIFTS": [
+    "kwiaciarnia", "kwiaty", "prezent", "jubiler",
+    "pandora", "apart", "yes", "w.kruk"
+  ]
+}

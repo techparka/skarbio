@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/surface"
+        android:fitsSystemWindows="true"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <!-- Scrim overlay when speed dial is open -->
+    <View
+        android:id="@+id/scrimOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:elevation="4dp"
+        android:visibility="gone" />
+
+    <!-- Speed Dial: Arc layout — 3 items arranged in an arc above center FAB -->
+
+    <!-- Left arc: Dodaj rachunek (bill) -->
+    <LinearLayout
+        android:id="@+id/speedDialBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="180dp"
+        android:layout_marginEnd="120dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:elevation="6dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/miniFabBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:backgroundTint="@color/warning_orange"
+            app:srcCompat="@drawable/ic_bill"
+            app:tint="@color/white"
+            app:maxImageSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_bill_short"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Center arc: Dodaj wydatek (expense) — highest point of arc -->
+    <LinearLayout
+        android:id="@+id/speedDialExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="210dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:elevation="6dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/miniFabExpense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:backgroundTint="@color/expense_red"
+            app:srcCompat="@drawable/ic_camera"
+            app:tint="@color/white"
+            app:maxImageSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_expense_short"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Right arc: Dodaj przychód (income) -->
+    <LinearLayout
+        android:id="@+id/speedDialIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="180dp"
+        android:layout_marginStart="120dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:elevation="6dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/miniFabIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            app:backgroundTint="@color/income_green"
+            app:srcCompat="@drawable/ic_income"
+            app:tint="@color/white"
+            app:maxImageSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_income_short"
+            android:textColor="@android:color/white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Main FAB — CENTER, elevated above BottomNav -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="@string/scan_receipt"
+        app:backgroundTint="@color/primary"
+        app:fabSize="normal"
+        app:maxImageSize="24dp"
+        app:srcCompat="@drawable/ic_scan"
+        app:tint="@color/white"
+        android:elevation="8dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp">
+
+        <!-- Period header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:background="@color/primary"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/period_label"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.08"
+                android:textStyle="bold"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rgPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rbPeriodAll"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/period_all" />
+
+            <RadioButton
+                android:id="@+id/rbPeriodThisMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/period_this_month" />
+
+            <RadioButton
+                android:id="@+id/rbPeriodLast3"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/period_last_3_months" />
+
+            <RadioButton
+                android:id="@+id/rbPeriodLast6"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/period_last_6_months" />
+
+            <RadioButton
+                android:id="@+id/rbPeriodLastYear"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:text="@string/period_last_year" />
+
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Category header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:background="@color/primary"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category_label"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.08"
+                android:textStyle="bold"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" />
+
+        <View
+            android:id="@+id/dividerAccount"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- Account header -->
+        <LinearLayout
+            android:id="@+id/accountHeaderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:background="@color/primary"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_label"
+                android:textSize="12sp"
+                android:textAllCaps="true"
+                android:letterSpacing="0.08"
+                android:textStyle="bold"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerAccount"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

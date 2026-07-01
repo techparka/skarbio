@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Table lines -->
+    <path
+        android:pathData="M3,3 L14,3 L14,5 L3,5 Z"
+        android:fillColor="@android:color/white"/>
+    <path
+        android:pathData="M3,7 L14,7 L14,9 L3,9 Z"
+        android:fillColor="@android:color/white"/>
+    <path
+        android:pathData="M3,11 L11,11 L11,13 L3,13 Z"
+        android:fillColor="@android:color/white"/>
+    <!-- Export arrow (down-right) -->
+    <path
+        android:pathData="M16,10 L16,17 L13.5,14.5 L12.5,15.5 L16.5,19.5 L20.5,15.5 L19.5,14.5 L17,17 L17,10 Z"
+        android:fillColor="@android:color/white"/>
+</vector>

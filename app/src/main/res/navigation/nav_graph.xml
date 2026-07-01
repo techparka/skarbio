@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.budgetapp.ocr.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_dashboard" />
+
+    <fragment
+        android:id="@+id/transactionsFragment"
+        android:name="com.budgetapp.ocr.ui.transactions.TransactionsFragment"
+        android:label="@string/nav_transactions" />
+
+    <fragment
+        android:id="@+id/scanReceiptFragment"
+        android:name="com.budgetapp.ocr.ui.scan.ScanReceiptFragment"
+        android:label="@string/nav_scan" />
+
+    <fragment
+        android:id="@+id/scanInvoiceFragment"
+        android:name="com.budgetapp.ocr.ui.bills.ScanInvoiceFragment"
+        android:label="@string/bills_title" />
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.budgetapp.ocr.ui.reports.ReportsFragment"
+        android:label="@string/nav_finance" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.budgetapp.ocr.ui.settings.SettingsFragment"
+        android:label="@string/nav_settings">
+
+        <action
+            android:id="@+id/action_settings_to_categories"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.budgetapp.ocr.ui.settings.CategoriesFragment"
+        android:label="@string/categories_title" />
+
+</navigation>

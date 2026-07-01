@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Skarbio</string>
+
+    <!-- Category names - Expense -->
+    <string name="cat_groceries">Groceries</string>
+    <string name="cat_fuel">Fuel</string>
+    <string name="cat_health">Health</string>
+    <string name="cat_restaurant">Restaurants</string>
+    <string name="cat_clothing">Clothing</string>
+    <string name="cat_electronics">Electronics</string>
+    <string name="cat_entertainment">Entertainment</string>
+    <string name="cat_transport">Transport</string>
+    <string name="cat_bills">Bills</string>
+    <string name="cat_beauty">Beauty</string>
+    <string name="cat_home">Home &amp; Garden</string>
+    <string name="cat_pets">Pets</string>
+    <string name="cat_education">Education</string>
+    <string name="cat_gifts">Gifts</string>
+    <string name="cat_other_expense">Other expenses</string>
+
+    <!-- Category names - Income -->
+    <string name="cat_salary">Salary</string>
+    <string name="cat_freelance">Freelance</string>
+    <string name="cat_gift_income">Gift</string>
+    <string name="cat_other_income">Other income</string>
+
+    <!-- Category names - Bills -->
+    <string name="cat_telecom">Telecommunications</string>
+    <string name="cat_energy">Energy</string>
+    <string name="cat_water">Water</string>
+    <string name="cat_gas">Gas</string>
+    <string name="cat_internet">Internet</string>
+    <string name="cat_other_bill">Other</string>
+    <string name="cat_balance_adjustment">Balance adjustment</string>
+
+    <!-- Balance adjustment -->
+    <string name="adjust_balance">Adjust balance</string>
+    <string name="adjust_balance_message">Enter the actual balance of this account. A correction transaction will be created for the difference.</string>
+    <string name="current_balance_label">Current balance: %1$s</string>
+    <string name="target_balance_hint">Actual balance</string>
+    <string name="balance_adjusted">Balance adjusted</string>
+    <string name="balance_no_change">Balance is already correct</string>
+
+    <!-- Scanner -->
+    <string name="take_photo">Take a photo</string>
+    <string name="scan_document">\uD83D\uDCC4 Scan document</string>
+    <string name="pick_image">Choose from gallery</string>
+    <string name="recognized_text">Recognized text:</string>
+    <string name="no_text">No text or not recognized</string>
+    <string name="processing">Processing…</string>
+    <string name="camera_permission_required">Camera permission required</string>
+    <string name="storage_permission_required">Storage read permission required</string>
+    <string name="error_ocr">Error during text recognition</string>
+    <string name="clear_text">Clear</string>
+    <string name="scan_receipt">Scan receipt</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="monthly_summary">Monthly summary</string>
+    <string name="income_label">Income</string>
+    <string name="expenses_label">Expenses</string>
+    <string name="balance_label">Monthly result</string>
+    <string name="balance_subtitle">Income − Expenses</string>
+    <string name="hero_total_balance">Total balance</string>
+    <string name="hero_total_balance_sub">Sum of all accounts</string>
+    <string name="hero_account_balance">Account balance</string>
+    <string name="hero_picker_title">What to show in the panel?</string>
+    <string name="hero_option_monthly">Monthly result</string>
+    <string name="hero_option_total">Total balance</string>
+    <string name="hero_option_account">Account</string>
+    <string name="category_breakdown">Category breakdown</string>
+    <string name="no_data_this_month">No data for this month</string>
+    <string name="budget_limit">Budget limit</string>
+
+    <string name="budget_exceeded">Exceeded by: %1$s</string>
+    <string name="no_budget_set">No budget set</string>
+    <string name="set_budget">Set budget</string>
+    <string name="monthly_budget">Monthly budget</string>
+    <string name="daily_average">Daily average</string>
+
+    <!-- Transactions -->
+    <string name="transactions_title">History</string>
+    <string name="no_transactions">No transactions</string>
+    <string name="add_expense">Add expense</string>
+    <string name="add_income">Add income</string>
+    <string name="delete_transaction">Delete transaction</string>
+    <string name="transaction_deleted">Transaction deleted</string>
+    <string name="confirm_delete">Are you sure you want to delete this transaction?</string>
+    <string name="undo">Undo</string>
+    <string name="all_categories">All categories</string>
+    <string name="filter_by_category">Filter by category</string>
+    <string name="search_transactions">Search transactions</string>
+    <string name="expense_type">Expense</string>
+    <string name="income_type">Income</string>
+
+    <!-- Edit transaction dialog -->
+    <string name="edit_transaction">Edit transaction</string>
+    <string name="store_name_label">Store name</string>
+    <string name="income_source_label">Income source</string>
+    <string name="amount_label">Amount</string>
+    <string name="category_label">Category</string>
+    <string name="date_label">Date</string>
+    <string name="notes_label">Notes</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_valid_amount">Enter a valid amount</string>
+    <string name="select_category">Select a category</string>
+
+    <!-- Edit expense dialog -->
+    <string name="edit_expense">Edit expense</string>
+    <string name="unknown_store">Unknown store</string>
+    <string name="hide_receipt">▼ Hide receipt</string>
+    <string name="show_receipt">▶ Receipt preview</string>
+    <string name="shrink_preview">⤡ Shrink</string>
+    <string name="expand_preview">⤢ Enlarge</string>
+    <string name="scan_instead">📷 Scan receipt instead</string>
+    <string name="security_section">Security</string>
+    <string name="app_lock_title">App lock</string>
+    <string name="app_lock_description">Require biometrics or PIN to open app</string>
+    <string name="app_lock_subtitle">Confirm your identity to access Skarbio</string>
+
+    <string name="show_invoice">▶ Invoice preview</string>
+    <string name="hide_invoice">▼ Hide invoice</string>
+    <string name="view_receipt">View receipt</string>
+    <string name="hide_receipt_preview">Hide receipt</string>
+
+    <!-- Add income dialog -->
+    <string name="add_income_title">Add income</string>
+    <string name="payer_label">Payer</string>
+    <string name="payer_not_specified">Not specified</string>
+
+    <!-- Bills / Invoices -->
+    <string name="bills_title">Bills</string>
+    <string name="scan_invoice">Scan invoice</string>
+    <string name="edit_bill">Edit bill</string>
+    <string name="vendor_name_label">Vendor name</string>
+    <string name="invoice_number_label">Invoice number</string>
+    <string name="due_date_label">Due date</string>
+    <string name="issue_date_label">Issue date</string>
+    <string name="bank_account_label">Bank account</string>
+    <string name="recurrence_label">Recurrence</string>
+    <string name="reminder_label">Reminder</string>
+    <string name="reminder_days_label">Days before</string>
+    <string name="mark_as_paid">Mark as paid</string>
+    <string name="mark_as_unpaid">Mark as unpaid</string>
+    <string name="delete">Delete</string>
+    <string name="unknown_vendor">Unknown vendor</string>
+    <string name="bill_saved">Bill saved</string>
+    <string name="bill_deleted">Bill deleted</string>
+    <string name="bill_marked_paid">Bill marked as paid</string>
+    <string name="bill_marked_unpaid">Bill marked as unpaid</string>
+    <string name="no_bills">No bills</string>
+    <string name="forecast_label">Forecast</string>
+    <string name="select_forecasts">Select forecasts</string>
+    <string name="save_selected">Save selected</string>
+
+    <!-- Recurrence labels -->
+    <string name="recurrence_none">None</string>
+    <string name="recurrence_monthly">Monthly</string>
+    <string name="recurrence_bimonthly">Every 2 months</string>
+    <string name="recurrence_quarterly">Quarterly</string>
+    <string name="recurrence_semiannual">Every 6 months</string>
+    <string name="recurrence_annual">Annually</string>
+
+    <!-- Bill status -->
+    <string name="status_unpaid">Unpaid</string>
+    <string name="status_paid">Paid</string>
+    <string name="status_overdue">Overdue</string>
+    <string name="status_to_pay">To Pay</string>
+    <string name="paid_on_date">Paid: %1$s</string>
+
+    <!-- Bill reminders / notifications -->
+    <string name="notification_channel_bills">Bill reminders</string>
+    <string name="notification_channel_description">Notifications about upcoming payment deadlines</string>
+    <string name="notification_overdue_title">Overdue bill!</string>
+    <string name="notification_overdue_message">%1$s: %2$s - overdue %3$d days</string>
+    <string name="notification_due_today_title">Bill due today!</string>
+    <string name="notification_due_today_message">%1$s: %2$s</string>
+    <string name="notification_due_tomorrow_title">Bill due tomorrow</string>
+    <string name="notification_due_tomorrow_message">%1$s: %2$s</string>
+    <string name="notification_due_days_title">Bill due in %1$d days</string>
+    <string name="notification_due_days_message">%1$s: %2$s - due %3$s</string>
+
+    <!-- Invoice warnings -->
+    <string name="warning_invoice_older_than_year">⚠️ Invoice older than a year (%1$d days). Are you sure you want to add it?</string>
+    <string name="warning_invoice_older_than_month">⚠️ Invoice older than a month (%1$d days). You can backfill data.</string>
+    <string name="warning_invoice_old">⚠️ Invoice from %1$s (%2$d days ago).</string>
+    <string name="warning_due_date_passed">⚠️ Due date passed %1$d days ago. Are you sure you want to add it?</string>
+
+    <!-- Invoice scanning -->
+    <string name="pick_pdf">Select invoice (PDF)</string>
+    <string name="scanning_invoice">Scanning invoice…</string>
+    <string name="invoice_scan_error">Error scanning invoice</string>
+    <string name="no_invoice_data">Could not extract invoice data</string>
+    <string name="invoice_too_short">Document too short to be an invoice</string>
+    <string name="forecasts_found">%1$d forecasts found</string>
+    <string name="show_forecasts">Show forecasts</string>
+
+    <!-- Receipt scanning -->
+    <string name="scanning_receipt">Scanning receipt…</string>
+    <string name="receipt_scan_error">Error scanning receipt</string>
+    <string name="scan_another">Scan another</string>
+    <string name="receipt_saved">Expense saved!</string>
+    <string name="possible_duplicate_title">Possible duplicate</string>
+    <string name="possible_duplicate_message">A similar transaction already exists:\n%1$s - %2$s (%3$s)\n\nSave anyway?</string>
+    <string name="save_anyway">Save anyway</string>
+
+    <!-- Reports -->
+    <string name="reports_title">Reports</string>
+    <string name="period_weekly">Weekly</string>
+    <string name="period_monthly">Monthly</string>
+    <string name="period_yearly">Yearly</string>
+    <string name="total_expenses">Total expenses</string>
+    <string name="total_income">Total income</string>
+    <string name="top_stores">Top stores</string>
+    <string name="category_comparison">Category comparison</string>
+    <string name="no_data_for_period">No data for this period</string>
+    <string name="previous_period">vs. previous period</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="currency_label">Currency</string>
+    <string name="export_data">Export data</string>
+    <string name="export_csv">Export CSV</string>
+    <string name="export_json">Export JSON</string>
+    <string name="export_success">Data exported successfully</string>
+    <string name="export_error">Export error</string>
+    <string name="clear_all_data">Clear all data</string>
+    <string name="clear_data_confirm">This will permanently delete all transactions, bills, budgets and categories. Consider exporting a CSV backup first.</string>
+    <string name="clear_data_continue">Continue</string>
+    <string name="clear_data_final_title">Are you absolutely sure?</string>
+    <string name="clear_data_final_message">Type DELETE below to confirm. All data will be permanently removed.</string>
+    <string name="clear_data_type_hint">Type DELETE</string>
+    <string name="clear_data_keyword">DELETE</string>
+    <string name="clear_data_confirm_button">Delete everything</string>
+    <string name="data_cleared">All data cleared</string>
+    <string name="about_app">About app</string>
+    <string name="version_label">Version</string>
+    <string name="monthly_budget_setting">Monthly budget</string>
+    <string name="set_monthly_budget">Set monthly budget</string>
+    <string name="budget_hint">e.g. 3000</string>
+    <string name="budget_saved">Budget saved</string>
+    <string name="notification_settings">Notification settings</string>
+    <string name="language_setting">Language</string>
+    <string name="language_system">System default</string>
+    <string name="language_english">English</string>
+    <string name="language_polish">Polski</string>
+    <string name="enable_bill_reminders">Bill reminders</string>
+    <string name="default_reminder_days">Default reminder days</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_transactions">History</string>
+    <string name="nav_scan">Scan</string>
+    <string name="nav_reports">Reports</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_more">More</string>
+    <string name="more_title">More</string>
+
+    <!-- Speed dial labels -->
+    <string name="label_bill_short">Bill</string>
+    <string name="label_expense_short">Expense</string>
+    <string name="label_income_short">Income</string>
+
+    <!-- Export -->
+    <string name="export_coming_soon">Data export — coming soon!</string>
+
+    <!-- Scan tabs -->
+    <string name="tab_receipt">Receipt</string>
+    <string name="tab_invoice">Invoice</string>
+
+    <!-- Common -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="confirm">Confirm</string>
+    <string name="warning">Warning</string>
+    <string name="error">Error</string>
+    <string name="loading">Loading…</string>
+    <string name="amount_format">%1$.2f PLN</string>
+    <string name="amount_format_short">%1$.2f</string>
+    <string name="amount_format_rounded">%1$.0f PLN</string>
+    <string name="no_data">No data</string>
+
+    <!-- Duplicate warning dialog -->
+    <string name="duplicate_title">Possible duplicate</string>
+    <string name="duplicate_message">A similar receipt was already scanned. Save anyway?</string>
+    <string name="duplicate_save_anyway">Save anyway</string>
+    <string name="duplicate_cancel">Cancel</string>
+
+    <!-- Bills list -->
+    <string name="bills_tab_unpaid">Unpaid</string>
+    <string name="bills_tab_paid">Paid</string>
+    <string name="bills_tab_all">All</string>
+    <string name="due_in_days">Due in %1$d days</string>
+    <string name="due_tomorrow">Due tomorrow</string>
+    <string name="overdue_days">Overdue %1$d days</string>
+    <string name="overdue_1_day">Overdue 1 day</string>
+    <string name="due_today">Due today</string>
+    <string name="due_date_prefix">Due: %1$s</string>
+    <string name="transactions_count">%1$d transactions</string>
+    <string name="select_at_least_one">Select at least one forecast</string>
+    <string name="forecasts_found_count">Found %1$d forecasts</string>
+    <string name="percent_of_total">%1$.0f%% of total</string>
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
+
+    <!-- Speed dial -->
+    <string name="add_bill">Add bill</string>
+
+    <!-- Confirm expense dialog -->
+    <string name="confirm_expense">Confirm expense</string>
+
+    <!-- Forecasts selection dialog -->
+    <string name="forecasts_found_title">Forecasts found</string>
+    <string name="forecasts_select_hint">Select forecasts you want to add as separate bills:</string>
+    <string name="skip">Skip</string>
+    <string name="add_selected">Add selected</string>
+
+    <!-- Dashboard -->
+    <string name="expenses_by_category">Expenses by category</string>
+    <string name="bills_to_pay">Bills to pay</string>
+    <string name="category_details">Category details</string>
+    <string name="scan_first_receipt">Scan your first receipt!</string>
+    <string name="zero_amount">0.00</string>
+
+    <!-- Reports -->
+    <string name="expense_trend_6m">Expense trend (6 months)</string>
+    <string name="categories_vs_previous">Categories: this vs previous month</string>
+    <string name="top_stores_title">Top stores</string>
+    <string name="no_report_data">No data for reports</string>
+    <string name="add_transactions_hint">Add transactions to see reports</string>
+
+    <!-- Scan invoice -->
+    <string name="import_pdf_invoice">Import PDF invoice</string>
+    <string name="or_add_manually">or add manually</string>
+    <string name="import_invoice_pdf">Import invoice PDF</string>
+    <string name="or_label">or</string>
+    <string name="gallery">Gallery</string>
+    <string name="analyzing_invoice">Analyzing invoice…</string>
+    <string name="add_manually">Add manually</string>
+
+    <!-- Scan receipt -->
+    <string name="take_receipt_photo">Take a receipt photo</string>
+    <string name="or_choose_gallery">or choose from gallery</string>
+    <string name="scan_doc">Scan document</string>
+    <string name="import_receipt_pdf">Import receipt PDF</string>
+    <string name="camera">Camera</string>
+    <string name="analyzing_receipt">Analyzing receipt…</string>
+    <string name="pdf_type_dialog_title">What type of document is this?</string>
+    <string name="pdf_type_receipt">Receipt / Expense</string>
+    <string name="pdf_type_invoice">Invoice / Bill</string>
+
+    <!-- Settings -->
+    <string name="default_currency">Default currency</string>
+    <string name="pln">PLN</string>
+    <string name="theme">Theme</string>
+    <string name="system_theme">System</string>
+    <string name="data_section">Data</string>
+    <string name="export_to_csv">Export to CSV</string>
+    <string name="save_all_transactions_csv">Save all transactions as CSV file</string>
+    <string name="info_section">Information</string>
+    <string name="budget_app_name">Skarbio</string>
+    <string name="app_motto">Twój prywatny skarbiec</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="app_description">Personal finance with receipt scanning</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="privacy_policy_description">How we handle your data</string>
+    <string name="privacy_policy_url">https://techparka.github.io/privacy-policy.html</string>
+
+    <!-- Transaction list / filters -->
+    <string name="search_hint">Search…</string>
+    <string name="all_tab">All</string>
+    <string name="filter_sort">Filter</string>
+    <string name="clear_filters">Clear filters</string>
+    <string name="period_label">Time period</string>
+    <string name="sort_label">Sort by</string>
+    <string name="period_all">All time</string>
+    <string name="period_this_month">This month</string>
+    <string name="period_last_3_months">Last 3 months</string>
+    <string name="period_last_6_months">Last 6 months</string>
+    <string name="period_last_year">Last year</string>
+    <string name="period_specific_month">%1$s</string>
+    <string name="sort_newest">Newest first</string>
+    <string name="sort_oldest">Oldest first</string>
+    <string name="sort_highest">Highest amount</string>
+    <string name="sort_lowest">Lowest amount</string>
+    <string name="sort_due_soon">Due soonest</string>
+    <string name="sort_due_late">Due latest</string>
+    <string name="filtered_by_category">Category: %1$s</string>
+    <string name="filtered_by_account">Account: %1$s</string>
+    <string name="pay">Pay</string>
+    <string name="n_selected">%1$d selected</string>
+    <string name="scan_to_add_expense">Scan a receipt to add an expense</string>
+
+    <!-- Budget -->
+    <string name="nav_analytics">Analytics</string>
+    <string name="tab_reports">Reports</string>
+    <string name="tab_budgets">Budgets</string>
+    <string name="add_budget">Add budget</string>
+    <string name="edit_budget">Edit budget</string>
+    <string name="no_budgets">No budgets yet</string>
+    <string name="no_budgets_hint">Tap + to set a spending limit for a category</string>
+    <string name="budget_limit_label">Monthly limit</string>
+    <string name="budget_limit_hint">e.g. 500</string>
+    <string name="budget_amounts">%.0f / %.0f PLN</string>
+    <string name="budget_percentage">%d%%</string>
+    <string name="budget_remaining">Left %s</string>
+    <string name="budget_over">Over budget by %s</string>
+    <string name="dashboard_budgets_title">Budget alerts</string>
+    <string name="monthly_spending">Monthly spending</string>
+    <string name="prev_month">Previous month</string>
+    <string name="next_month">Next month</string>
+    <string name="budget_alert_ok">All budgets on track</string>
+
+    <!-- Duplicate warning -->
+    <string name="detection_confidence">Detection confidence:</string>
+    <string name="add_anyway">Add anyway</string>
+
+    <!-- Dialog hints -->
+    <string name="amount_hint">Amount (PLN)</string>
+    <string name="merchant_hint">Store / merchant</string>
+    <string name="amount_pln_hint">Amount (PLN)</string>
+    <string name="source_hint">Source (e.g. Employer, Client)</string>
+    <string name="notes_optional_hint">Notes (optional)</string>
+    <string name="vendor_hint">Vendor</string>
+    <string name="invoice_number_hint">Invoice number</string>
+    <string name="payment_amount_hint">Payment amount (PLN)</string>
+    <string name="due_date_hint">Due date</string>
+    <string name="issue_date_hint">Issue date</string>
+    <string name="days_before_hint">Days before due date</string>
+    <string name="bank_account_hint">Bank account number (optional)</string>
+    <string name="date_optional_hint">Date (optional)</string>
+    <string name="delete_bill">Delete bill</string>
+    <string name="appearance_section">Appearance</string>
+    <string name="notifications_section">Notifications</string>
+    <string name="bill_reminders_description">Notify about upcoming payment deadlines</string>
+    <string name="clear_data_description">Delete all transactions, bills and budgets</string>
+    <string name="version_format">Version %1$s</string>
+    <string name="version_build_format">Version %1$s (build %2$s)</string>
+    <string name="bill_type">Bill</string>
+    <string name="analytics_title">Analytics</string>
+    <string name="monthly_trend">Monthly trend</string>
+    <string name="change_label">Change</string>
+
+    <!-- Scan receipt screen -->
+    <string name="scan_receipt_title">Scan Receipt</string>
+    <string name="scan_placeholder_text">Point camera at a receipt to scan it, or choose an image from gallery</string>
+    <string name="from_gallery">From Gallery</string>
+    <string name="import_pdf">Import PDF</string>
+    <string name="manual_entry_hint">Add expense manually</string>
+
+    <!-- Scan invoice screen -->
+    <string name="scan_invoice_title">Scan Invoice</string>
+    <string name="invoice_placeholder_text">Import an invoice PDF or choose from gallery to scan</string>
+
+    <!-- Budget tab -->
+    <string name="add_budget_hint">Tap + to set a spending limit for a category</string>
+
+    <!-- Accounts -->
+    <string name="nav_finance">Finance</string>
+    <string name="finance_title">Finance</string>
+    <string name="tab_accounts">Accounts</string>
+    <string name="accounts_title">Your accounts</string>
+    <string name="add_account">Add account</string>
+    <string name="edit_account">Edit account</string>
+    <string name="delete_account">Delete account</string>
+    <string name="delete_account_title">Delete account</string>
+    <string name="delete_account_message">Delete account \"%1$s\"? All transactions will be moved to the default account.</string>
+    <string name="account_deleted">Account deleted</string>
+    <string name="account_saved">Account saved</string>
+    <string name="account_name_hint">Account name</string>
+    <string name="account_name_required">Please enter an account name</string>
+    <string name="account_type_label">Account type</string>
+    <string name="account_type_checking">Checking</string>
+    <string name="account_type_savings">Savings</string>
+    <string name="account_default">Default</string>
+    <string name="account_set_default">Set as default</string>
+    <string name="account_balance">Balance</string>
+    <string name="account_label">Account</string>
+    <string name="account_from">From account</string>
+    <string name="account_to">To account</string>
+    <string name="transfer_title">Transfer between accounts</string>
+    <string name="transfer_amount_hint">Transfer amount</string>
+    <string name="transfer_success">Transfer completed</string>
+    <string name="transfer_error_same_account">Select two different accounts</string>
+    <string name="transfer_error_amount">Enter a valid amount</string>
+    <string name="transfer_type">Transfer</string>
+    <string name="no_accounts">No accounts</string>
+    <string name="cannot_delete_default_account">Cannot delete the default account</string>
+    <string name="cannot_delete_last_account">Cannot delete the last account</string>
+
+    <!-- Category Management -->
+    <string name="categories_title">Categories</string>
+    <string name="manage_categories">Manage categories</string>
+    <string name="manage_categories_description">Add, edit or remove spending categories</string>
+    <string name="add_category">Add category</string>
+    <string name="edit_category">Edit category</string>
+    <string name="delete_category_title">Delete category</string>
+    <string name="delete_category_message">Delete category \"%1$s\"? This cannot be undone.</string>
+    <string name="category_deleted">Category deleted</string>
+    <string name="no_categories">No categories yet</string>
+    <string name="category_name_hint">Category name</string>
+    <string name="category_name_required">Please enter a category name</string>
+    <string name="category_icon_label">Icon</string>
+    <string name="category_color_label">Color</string>
+
+    <!-- Backup / Restore / Import CSV -->
+    <string name="backup_title">Backup</string>
+    <string name="backup_subtitle">Save an encrypted copy of your data</string>
+    <string name="restore_title">Restore backup</string>
+    <string name="restore_subtitle">Load a backup file (.skb)</string>
+    <string name="import_csv_title">Import CSV</string>
+    <string name="import_csv_subtitle">Import data from a CSV file</string>
+    <string name="backup_password_hint">Password (leave empty = no encryption)</string>
+    <string name="backup_success">Backup saved successfully</string>
+    <string name="backup_error">Backup failed</string>
+    <string name="restore_warning">This will replace ALL current data. Continue?</string>
+    <string name="restore_success">Restore successful. Restarting app…</string>
+    <string name="restore_error_wrong_password">Wrong password or corrupted file</string>
+    <string name="restore_error">Restore failed</string>
+    <string name="import_success">Imported: %1$d records, skipped: %2$d</string>
+    <string name="import_error">Import failed</string>
+
+    <!-- Consent dialog -->
+    <string name="consent_title">Store recognition</string>
+    <string name="consent_message">The app can automatically recognize store names by looking up the NIP (tax ID) from the receipt in the public VAT registry (Ministry of Finance).\n\nNone of your data is sent anywhere — only the store\'s NIP is checked.\n\nIf you don\'t enable this, everything will work normally — store name recognition will just be less precise. You can always type the store name yourself, and the app will remember it for the future.\n\nYou can change this choice at any time in Settings.</string>
+    <string name="consent_enable">Enable online lookup</string>
+    <string name="consent_continue">Continue</string>
+
+    <!-- Store lookup setting -->
+    <string name="store_lookup_title">Online store recognition</string>
+    <string name="store_lookup_description">Look up store names from VAT registry by NIP</string>
+
+    <!-- Unsaved changes confirmation -->
+    <string name="unsaved_changes_title">Unsaved changes</string>
+    <string name="unsaved_changes_message">You have unsaved changes. Do you want to save them?</string>
+    <string name="unsaved_changes_discard">Don\'t save</string>
+
+    <!-- Bank transfer import -->
+    <string name="import_bank_transfer">Import bank transfer confirmation</string>
+    <string name="analyzing_bank_transfer">Analyzing transfer confirmation…</string>
+
+    <!-- Recurring bills -->
+    <string name="recurring_invoice">Faktura cykliczna</string>
+    <string name="frequency_label">Częstotliwość</string>
+    <string name="generate_for_period">Generuj na okres</string>
+    <string name="months_6">6 mies.</string>
+    <string name="months_12">12 mies.</string>
+    <string name="months_24">24 mies.</string>
+    <string name="custom_period">Własny…</string>
+    <string name="custom_months_hint">Liczba miesięcy</string>
+    <string name="payment_day_hint">Dzień płatności (1–28)</string>
+    <string name="start_from_label">Rozpocznij od</string>
+    <string name="recurring_preview">Zostanie wygenerowanych: %1$d faktur (%2$s – %3$s)</string>
+    <string name="recurring_bills_saved">Wygenerowano %d faktur</string>
+    <string name="payment_day_error">Dzień musi być między 1 a 28</string>
+    <string name="delete_recurring_title">Delete recurring series</string>
+    <string name="delete_recurring_message">This bill is part of a recurring series (%1$d bills). What would you like to delete?</string>
+    <string name="delete_only_this">Only this bill</string>
+    <string name="delete_entire_series">Entire series</string>
+    <string name="series_deleted">Series deleted (%1$d bills)</string>
+    <string name="recurring_series_label">Recurring series (%1$d bills)</string>
+
+    <!-- Cashflow / Calendar tab -->
+    <string name="tab_calendar">Calendar</string>
+    <string name="cashflow_unpaid_total">To pay</string>
+    <string name="cashflow_paid_total">Paid</string>
+    <string name="cashflow_projected_balance">Projected balance</string>
+    <string name="cashflow_section_overdue">Overdue</string>
+    <string name="cashflow_section_this_week">This week</string>
+    <string name="cashflow_section_later">Later this month</string>
+    <string name="cashflow_section_paid">Paid</string>
+    <string name="cashflow_no_bills">No bills</string>
+    <string name="cashflow_no_bills_hint">No bills for this month</string>
+
+    <!-- Widget -->
+    <string name="widget_label">Scan</string>
+    <string name="widget_description">Quick receipt scanning</string>
+</resources>

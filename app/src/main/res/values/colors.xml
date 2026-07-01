@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ═══════════════════════════════════════════════════
+         PRIMARY — Indigo (matches dashboard accent)
+         ═══════════════════════════════════════════════════ -->
+    <color name="primary">#6366F1</color>
+    <color name="primary_light">#818CF8</color>
+    <color name="primary_dark">#4338CA</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECONDARY — Emerald (income / positive)
+         ═══════════════════════════════════════════════════ -->
+    <color name="secondary">#059669</color>
+    <color name="secondary_light">#10B981</color>
+    <color name="on_secondary">#FFFFFF</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         SEMANTIC
+         ═══════════════════════════════════════════════════ -->
+    <color name="income_green">#059669</color>
+    <color name="expense_red">#DC2626</color>
+    <color name="warning_orange">#D97706</color>
+
+    <!-- Tinted backgrounds for badges / chips (light mode) -->
+    <color name="income_bg">#ECFDF5</color>
+    <color name="expense_bg">#FEF2F2</color>
+    <color name="warning_bg">#FFFBEB</color>
+    <color name="accent_bg">#EEF2FF</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEUTRALS — Light Mode
+         ═══════════════════════════════════════════════════ -->
+    <color name="background">#F8FAFF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F1F5F9</color>
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#94A3B8</color>
+    <color name="divider">#E2E8F0</color>
+    <color name="border">#CBD5E1</color>
+    <color name="icon_background">#E0E7FF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         CATEGORY COLORS
+         ═══════════════════════════════════════════════════ -->
+    <color name="cat_groceries">#16A34A</color>
+    <color name="cat_fuel">#EA580C</color>
+    <color name="cat_health">#DC2626</color>
+    <color name="cat_restaurant">#DB2777</color>
+    <color name="cat_clothing">#9333EA</color>
+    <color name="cat_electronics">#2563EB</color>
+    <color name="cat_entertainment">#0891B2</color>
+    <color name="cat_transport">#92400E</color>
+    <color name="cat_bills">#475569</color>
+    <color name="cat_home">#65A30D</color>
+    <color name="cat_other">#64748B</color>
+
+    <!-- Category icon backgrounds (12% opacity) -->
+    <color name="cat_groceries_bg">#1F16A34A</color>
+    <color name="cat_fuel_bg">#1FEA580C</color>
+    <color name="cat_health_bg">#1FDC2626</color>
+    <color name="cat_restaurant_bg">#1FDB2777</color>
+    <color name="cat_clothing_bg">#1F9333EA</color>
+    <color name="cat_electronics_bg">#1F2563EB</color>
+    <color name="cat_entertainment_bg">#1F0891B2</color>
+    <color name="cat_transport_bg">#1F92400E</color>
+    <color name="cat_bills_bg">#1F475569</color>
+    <color name="cat_home_bg">#1F65A30D</color>
+    <color name="cat_other_bg">#1F64748B</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         DASHBOARD HERO — always dark regardless of theme
+         ═══════════════════════════════════════════════════ -->
+    <color name="dash_background">#080D1A</color>
+    <color name="dash_surface">#0F172A</color>
+    <color name="dash_surface_elevated">#141E32</color>
+    <color name="dash_text_primary">#F1F5F9</color>
+    <color name="dash_text_secondary">#94A3B8</color>
+    <color name="dash_text_muted">#475569</color>
+    <color name="dash_income">#34D399</color>
+    <color name="dash_expense">#F87171</color>
+    <color name="dash_warning">#FBBF24</color>
+    <color name="dash_accent">#818CF8</color>
+    <color name="dash_accent_soft">#A5B4FC</color>
+    <color name="dash_divider">#1E293B</color>
+    <color name="dash_border">#1E293B</color>
+    <color name="dash_warning_border">#40FBBF24</color>
+
+    <!-- Widget -->
+    <color name="widget_background">#F0F0FF</color>
+</resources>

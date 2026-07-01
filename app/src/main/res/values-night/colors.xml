@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ═══════════════════════════════════════════════════
+         PRIMARY — Lighter indigo for dark backgrounds
+         ═══════════════════════════════════════════════════ -->
+    <color name="primary">#818CF8</color>
+    <color name="primary_light">#A5B4FC</color>
+    <color name="primary_dark">#6366F1</color>
+    <color name="on_primary">#1E1B4B</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         SECONDARY — Emerald (brighter in dark mode)
+         ═══════════════════════════════════════════════════ -->
+    <color name="secondary">#34D399</color>
+    <color name="secondary_light">#6EE7B7</color>
+    <color name="on_secondary">#022C22</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         SEMANTIC — Bright versions for dark backgrounds
+         ═══════════════════════════════════════════════════ -->
+    <color name="income_green">#34D399</color>
+    <color name="expense_red">#F87171</color>
+    <color name="warning_orange">#FBBF24</color>
+
+    <!-- Tinted backgrounds — dark mode (very subtle) -->
+    <color name="income_bg">#052E16</color>
+    <color name="expense_bg">#2D0000</color>
+    <color name="warning_bg">#1C1200</color>
+    <color name="accent_bg">#1E1B4B</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         NEUTRALS — Dark Mode
+         ═══════════════════════════════════════════════════ -->
+    <color name="background">#080D1A</color>
+    <color name="surface">#0F172A</color>
+    <color name="surface_variant">#141E32</color>
+    <color name="text_primary">#F1F5F9</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#475569</color>
+    <color name="divider">#1E293B</color>
+    <color name="border">#1E293B</color>
+    <color name="icon_background">#1B1A3A</color>
+
+    <!-- ═══════════════════════════════════════════════════
+         CATEGORY COLORS — brighter for dark backgrounds
+         ═══════════════════════════════════════════════════ -->
+    <color name="cat_groceries">#4ADE80</color>
+    <color name="cat_fuel">#FB923C</color>
+    <color name="cat_health">#F87171</color>
+    <color name="cat_restaurant">#F472B6</color>
+    <color name="cat_clothing">#C084FC</color>
+    <color name="cat_electronics">#60A5FA</color>
+    <color name="cat_entertainment">#22D3EE</color>
+    <color name="cat_transport">#D97706</color>
+    <color name="cat_bills">#94A3B8</color>
+    <color name="cat_home">#86EFAC</color>
+    <color name="cat_other">#94A3B8</color>
+
+    <!-- Category icon backgrounds — dark mode (15% opacity) -->
+    <color name="cat_groceries_bg">#264ADE80</color>
+    <color name="cat_fuel_bg">#26FB923C</color>
+    <color name="cat_health_bg">#26F87171</color>
+    <color name="cat_restaurant_bg">#26F472B6</color>
+    <color name="cat_clothing_bg">#26C084FC</color>
+    <color name="cat_electronics_bg">#2660A5FA</color>
+    <color name="cat_entertainment_bg">#2622D3EE</color>
+    <color name="cat_transport_bg">#26D97706</color>
+    <color name="cat_bills_bg">#2694A3B8</color>
+    <color name="cat_home_bg">#2686EFAC</color>
+    <color name="cat_other_bg">#2694A3B8</color>
+
+    <!-- Widget -->
+    <color name="widget_background">#1A1A2E</color>
+</resources>

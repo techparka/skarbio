@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="24dp">
+
+    <!-- Drag handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_sheet_handle" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/more_title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="12dp" />
+
+    <!-- Settings -->
+    <LinearLayout
+        android:id="@+id/itemSettings"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_settings"
+            android:tint="?attr/colorOnSurfaceVariant"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/nav_settings"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+
+    <!-- Categories -->
+    <LinearLayout
+        android:id="@+id/itemCategories"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_category"
+            android:tint="?attr/colorOnSurfaceVariant"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/categories_title"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+
+    <!-- Section: Data -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorOutlineVariant"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/data_section"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:letterSpacing="0.08"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:textStyle="bold"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="4dp" />
+
+    <!-- Export CSV -->
+    <LinearLayout
+        android:id="@+id/itemExport"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_export"
+            android:tint="?attr/colorOnSurfaceVariant"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/export_to_csv"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+
+    <!-- Import CSV -->
+    <LinearLayout
+        android:id="@+id/itemImportCsv"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_income"
+            android:tint="?attr/colorOnSurfaceVariant"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/import_csv_title"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+
+    <!-- Backup -->
+    <LinearLayout
+        android:id="@+id/itemBackup"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_export"
+            android:tint="?attr/colorOnSurfaceVariant"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/backup_title"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+
+    <!-- Restore -->
+    <LinearLayout
+        android:id="@+id/itemRestore"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_bill"
+            android:tint="?attr/colorOnSurfaceVariant"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/restore_title"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+    </LinearLayout>
+
+    <!-- Clear data -->
+    <LinearLayout
+        android:id="@+id/itemClearData"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_delete"
+            android:tint="@color/expense_red"
+            android:importantForAccessibility="no" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="@string/clear_all_data"
+            android:textSize="16sp"
+            android:textColor="@color/expense_red" />
+    </LinearLayout>
+
+</LinearLayout>
