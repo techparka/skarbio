@@ -114,7 +114,7 @@
 
   const ARIA = {
     'lang-btn': ['Switch language', 'Zmień język'],
-    'theme-btn': ['Switch colour theme', 'Zmień motyw kolorów'],
+    'theme-btn': ['Switch color theme', 'Zmień motyw kolorów'],
     'menu-btn': ['Open menu', 'Otwórz menu'],
     'rail-prev': ['Previous screen', 'Poprzedni ekran'],
     'rail-next': ['Next screen', 'Następny ekran'],

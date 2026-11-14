@@ -27,6 +27,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs"
 OUT = pathlib.Path(__file__).resolve().parent / "shots"
 PAGE = "http://127.0.0.1:8123/index.html"
+GOŚĆ = "127.0.0.1"                       # nadpisuje ją --url (badanie wersji opublikowanej)
 WIDTHS = (360, 390, 768, 820, 1024, 1440)
 PHONE_RATIO = 1080 / 2400  # 0,45
 
@@ -310,7 +311,7 @@ def check_policy(b) -> None:
     (ok if not zle else fail)(f"polityka: {len([h for h in linki if not str(h).startswith('http')])} lokalnych linków działa"
                               if not zle else f"polityka: martwe linki {zle}")
 
-    obce = sorted({u.split("/")[2] for u in req if not u.startswith("http://127.0.0.1")})
+    obce = sorted({u.split("/")[2] for u in req if GOŚĆ not in u})
     (ok if not obce else fail)("polityka: zero żądań na zewnątrz" if not obce else f"polityka: żądania na {obce}")
 
     ov = p.evaluate("() => document.documentElement.scrollWidth - document.documentElement.clientWidth")
@@ -325,7 +326,14 @@ def check_policy(b) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--shots", action="store_true")
+    ap.add_argument("--url", help="badaj wersję opublikowaną, np. https://techparka.github.io/skarbio/")
     args = ap.parse_args()
+
+    global PAGE, GOŚĆ
+    if args.url:
+        PAGE = args.url if args.url.endswith(".html") else args.url.rstrip("/") + "/index.html"
+        GOŚĆ = urlsplit(PAGE).netloc or "127.0.0.1"
+        print(f"badam: {PAGE}")
 
     html = (DOCS / "index.html").read_text(encoding="utf-8")
     css = (DOCS / "styles.css").read_text(encoding="utf-8")
@@ -405,7 +413,7 @@ def main() -> int:
         page.on("console", lambda m: console.append(f"{m.type}: {m.text}") if m.type in ("error", "warning") else None)
         page.on("pageerror", lambda e: console.append(f"pageerror: {e}"))
         page.on("request", lambda r: external.append(r.url)
-                if urlsplit(r.url).netloc and "127.0.0.1" not in urlsplit(r.url).netloc else None)
+                if urlsplit(r.url).netloc and GOŚĆ not in urlsplit(r.url).netloc else None)
 
         page.goto(PAGE, wait_until="networkidle")
         page.wait_for_timeout(1000)

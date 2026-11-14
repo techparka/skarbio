@@ -108,12 +108,22 @@ Nie usuwaj ich jako „martwych” — bramka układu i przyszłe motywy czepiaj
   musi być widoczny (kolor + podkreślenie) — globalne `a { color: inherit }` ich nie widać
   na stronie polityki, stąd `.prose a`.
 
-## Status publikacji (2026-11-14)
+## Status publikacji (2026-11-14, wieczór)
 
-Strona gotowa lokalnie (`66 OK · 0 uwag · 0 błędów`, do tego `beauty.py` `12 OK · 0 · 0`
-z pełnym pokryciem `:hover`), ale **GitHub Pages dla `techparka/skarbio` nie został jeszcze
-włączony**, a zmiany nie są commitnięte. Przed włączeniem Pages trzeba zdecydować o licencji
-(dziś brak pliku `LICENSE` → nie piszemy „open source” ani nie dodajemy pola `license` w
-JSON-LD).
+**Strona działa na GitHub Pages:** <https://techparka.github.io/skarbio/>, polityka pod
+`/privacy-policy.html`. Pierwszy raz wgrana w `89311de`; Pages buduje z katalogu `docs/`
+(dlatego trafia tam `docs/.nojekyll`) i stawia witrynę w ~30 s od pusha. Bramki przechodzą
+**na wersji opublikowanej**:
+
+```bash
+PYTHONIOENCODING=utf-8 python tools/landing/audit.py --url https://techparka.github.io/skarbio/
+# 68 OK · 0 uwag · 0 błędów (w tym „zero żądań na zewnątrz” liczone od własnej domeny)
+PYTHONIOENCODING=utf-8 python tools/landing/beauty.py --hover   # 13 ok · 0 · 0
+```
+
+Licencji wciąż nie ma (brak `LICENSE`), więc stopka mówi „license not yet declared”, a FAQ
+wyjaśnia, że kod jest publiczny, ale prawa zastrzeżone. Nie dodawaj „open source” ani pola
+`license` w JSON-LD, dopóki pliku nie przybędzie. Pisownia angielska jest **amerykańska**
+(`license`, `color`) — trzymaj się jej w nowych tekstach.
 
 Runbook procedury: [`knowledge/runbooks/landing-page-github-pages.md`](../knowledge/runbooks/landing-page-github-pages.md).
