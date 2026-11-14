@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Skarbio — offline expense tracker for Android</title>
-<meta name="description" content="Skarbio scans receipts and invoices with on-device OCR, tracks accounts, budgets and bills. No account, no cloud, no analytics — everything stays in your phone." />
+<title>Skarbio: offline expense tracker for Android</title>
+<meta name="description" content="Skarbio scans receipts and invoices with on-device OCR, tracks accounts, budgets and bills. No account, no cloud, no analytics. Everything stays in your phone." />
 <link rel="canonical" href="https://techparka.github.io/skarbio/" />
 <link rel="icon" href="assets/favicon.png" sizes="48x48" />
 <link rel="apple-touch-icon" href="assets/logo-192.png" />
@@ -13,7 +13,7 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Skarbio" />
-<meta property="og:title" content="Skarbio — snap the receipt, keep the data" />
+<meta property="og:title" content="Skarbio: snap the receipt, keep the data" />
 <meta property="og:description" content="Android expense tracker with on-device OCR. No account, no cloud, no analytics." />
 <meta property="og:url" content="https://techparka.github.io/skarbio/" />
 <meta property="og:image" content="https://techparka.github.io/skarbio/assets/og-cover.png" />
@@ -47,6 +47,7 @@
   "name": "Skarbio",
   "applicationCategory": "FinanceApplication",
   "operatingSystem": "Android 7.0+",
+  "inLanguage": ["en", "pl"],
   "softwareVersion": "1.3.1",
   "description": "Offline-first personal expense tracker for Android. On-device OCR for receipts and invoices, multi-account, budgets, bills and encrypted backups. No account and no server.",
   "codeRepository": "https://github.com/techparka/skarbio",
@@ -54,7 +55,7 @@
   "url": "https://techparka.github.io/skarbio/",
   "featureList": [
     "On-device OCR for receipts and invoices",
-    "Automatic categorisation from 220 store keywords",
+    "Automatic categorization from 220 store keywords",
     "Monthly budgets with 80% and 100% alerts",
     "Recurring bills with local notifications",
     "Encrypted AES-256-GCM backups and CSV export"
@@ -73,7 +74,7 @@
 
 <header class="nav" id="nav">
   <div class="nav__inner wrap">
-    <a class="brand" href="#top" aria-label="Skarbio — home">
+    <a class="brand" id="brand" href="#top" aria-label="Skarbio home">
       <img src="assets/logo-96.png" alt="" width="96" height="96" />
       <span>Skarbio</span>
     </a>
@@ -121,7 +122,7 @@
           <em data-i18n="hero.h1b">Keep the data.</em>
         </h1>
         <p class="lead reveal" style="--d:.1s" data-i18n="hero.lead">
-          Skarbio reads receipts and PDF invoices with on-device OCR, picks the category and keeps budgets honest. No cloud, no login, no internet.
+          Skarbio reads receipts and PDF invoices with on-device OCR, picks the category and keeps budgets honest. No cloud, no login, no internet required.
         </p>
 
         <div class="cta reveal" style="--d:.15s">
@@ -193,7 +194,7 @@
       <div class="demo__grid">
         <!-- dokument: paragon lub faktura -->
         <div class="demo__doc reveal" style="--d:.05s">
-          <div class="tabs" role="group" aria-label="Document type">
+          <div class="tabs" id="tabs" role="group" aria-label="Document type">
             <button class="tab is-on" id="tab-receipt" type="button" aria-pressed="true" data-doc="receipt" data-i18n="demo.tab1">Receipt</button>
             <button class="tab" id="tab-invoice" type="button" aria-pressed="false" data-doc="invoice" data-i18n="demo.tab2">Invoice</button>
             <span class="tabs__ink" aria-hidden="true"></span>
@@ -236,7 +237,7 @@
             <span class="paper__edge paper__edge--bottom" aria-hidden="true"></span>
           </div>
 
-          <p class="demo__hint" data-i18n="demo.hint">Sample data — nothing leaves this page. The real OCR runs inside Skarbio.</p>
+          <p class="demo__hint" data-i18n="demo.hint">Sample data: nothing leaves this page. The real OCR runs inside Skarbio.</p>
         </div>
 
         <!-- panel aplikacji -->
@@ -258,23 +259,23 @@
 
           <div class="fields" id="fields" aria-live="polite">
             <div class="field" data-field="store">
-              <span data-i18n="demo.f.store">Store</span><b class="val">—</b>
+              <span data-i18n="demo.f.store">Store</span><b class="val"></b>
             </div>
             <div class="field" data-field="amount">
-              <span data-i18n="demo.f.amount">Amount</span><b class="val mono">—</b>
+              <span data-i18n="demo.f.amount">Amount</span><b class="val mono"></b>
             </div>
             <div class="field" data-field="date">
-              <span data-i18n="demo.f.date">Date</span><b class="val">—</b>
+              <span data-i18n="demo.f.date">Date</span><b class="val"></b>
             </div>
             <div class="field" data-field="cat">
-              <span data-i18n="demo.f.cat">Category</span><b class="val"><span class="cat"><i></i><span class="cat__txt">—</span></span></b>
+              <span data-i18n="demo.f.cat">Category</span><b class="val"><span class="cat"><i></i><span class="cat__txt"></span></span></b>
             </div>
           </div>
 
           <label class="switch" id="recur-row" hidden>
             <input type="checkbox" id="recur" checked />
             <span class="switch__track" aria-hidden="true"></span>
-            <span class="switch__txt" data-i18n="demo.recur">Recurring bill — forecast the next 12 months</span>
+            <span class="switch__txt" data-i18n="demo.recur">Recurring bill (12 monthly installments)</span>
           </label>
 
           <div class="demo__actions">
@@ -318,7 +319,7 @@
 
         <article class="card reveal" style="--d:.05s">
           <div class="card__icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M3 12h2M19 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /><circle cx="12" cy="12" r="3.4" /></svg></div>
-          <h3 data-i18n="feat.2t">Auto-categorised</h3>
+          <h3 data-i18n="feat.2t">Auto-categorized</h3>
           <p data-i18n="feat.2d">220 store keywords and fuzzy matching, so “Biedronka” with a typo still lands in Groceries.</p>
         </article>
 
@@ -364,7 +365,7 @@
               <li><button type="button" data-k="other"><i style="--c:#22D3EE"></i>Other <b class="mono">12%</b></button></li>
             </ul>
           </div>
-          <p class="card__foot" data-i18n="feat.5d">Tap a slice in the app to see that category. Here, hover the legend.</p>
+          <p class="card__foot" data-i18n="feat.5d">Tap a slice to isolate a category. On this page, hover the legend.</p>
         </article>
 
         <article class="card reveal" style="--d:.1s">
@@ -374,7 +375,7 @@
         </article>
       </div>
 
-      <ul class="more reveal" aria-label="More features">
+      <ul class="more reveal" id="more" aria-label="More features">
         <li data-i18n="more.1">Accounts &amp; transfers</li>
         <li data-i18n="more.2">Combined balance</li>
         <li data-i18n="more.3">6-month trends, top stores</li>
@@ -401,8 +402,9 @@
 
     <div class="rail__bar wrap">
       <button class="navbtn" id="rail-prev" type="button" aria-label="Previous screen"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 5.5 8 12l6.5 6.5" /></svg></button>
-      <div class="dots" id="rail-dots" aria-label="Choose screen"></div>
+      <div class="dots" id="rail-dots" aria-label="Screen pages"></div>
       <button class="navbtn" id="rail-next" type="button" aria-label="Next screen"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 5.5 16 12l-6.5 6.5" /></svg></button>
+      <span class="pager__count" id="rail-licznik" aria-hidden="true">1/2</span>
     </div>
 
     <ul class="rail" id="rail" tabindex="0" aria-label="App screenshots">
@@ -422,11 +424,11 @@
         <header class="reveal">
           <p class="eyebrow" data-i18n="pr.eyebrow">Privacy</p>
           <h2 data-i18n="pr.h2">There is no server to breach</h2>
-          <p class="lead" data-i18n="pr.lead">Not a promise in a policy — the app simply has nowhere to send your data.</p>
+          <p class="lead" data-i18n="pr.lead">That is not a clause in a policy: the app simply has nowhere to send your data.</p>
         </header>
         <ul class="nots reveal" style="--d:.1s">
-          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" /><path d="M5 20a7 7 0 0 1 14 0" /></svg><b data-i18n="pr.1">No sign-up. It works the moment it installs.</b></li>
-          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17V9M9.3 17V5M14.7 17v-5M20 17V8" /></svg><b data-i18n="pr.2">No analytics, no ad or crash SDKs — the build carries none.</b></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.5" /><path d="M5 20a7 7 0 0 1 14 0" /></svg><b data-i18n="pr.1">No sign-up. It works the moment you install it.</b></li>
+          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17V9M9.3 17V5M14.7 17v-5M20 17V8" /></svg><b data-i18n="pr.2">No analytics, no ad or crash SDKs. The build carries none of them.</b></li>
           <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 16.5A4.5 4.5 0 0 1 6.8 7.6 5.6 5.6 0 0 1 17.6 8.4 3.9 3.9 0 0 1 17 16.5" /><path d="M14.5 13 10 17.5" /><path d="M4 20 20 4" /></svg><b data-i18n="pr.3">No sync. Rows live in a Room (SQLite) database on the phone.</b></li>
           <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5 19 6v5.5c0 4-2.9 7.4-7 8.9-4.1-1.5-7-4.9-7-8.9V6l7-2.5Z" /></svg><b data-i18n="pr.4">No connection needed for OCR, parsing, charts or backups.</b></li>
         </ul>
@@ -458,7 +460,7 @@
       <div class="stack__copy reveal">
         <p class="eyebrow" data-i18n="st.eyebrow">Under the hood</p>
         <h2 data-i18n="st.h2">Native Kotlin. No runtime, no backend.</h2>
-        <p data-i18n="st.lead">One APK, XML layouts, a Room database and ML Kit. If you know Android, readable in an evening.</p>
+        <p data-i18n="st.lead">One APK, XML layouts, a Room database and ML Kit. If you know Android, you can read it in an evening.</p>
         <ul class="pills">
           <li>Kotlin</li><li>MVVM + StateFlow</li><li>Hilt</li><li>Room</li><li>ML Kit OCR</li><li>Document Scanner</li><li>CameraX</li><li>MPAndroidChart</li><li>WorkManager</li><li>PdfBox-Android</li><li>AES-256-GCM</li><li>Coroutines &amp; Flow</li>
         </ul>
@@ -471,7 +473,7 @@
 <span class="c">tables</span>  7 <span class="t">room</span>
 <span class="c">min</span>     api 24 <span class="t">(android 7.0)</span>
 <span class="c">target</span>  api 35 <span class="t">· v1.3.1</span></code></pre>
-        <p class="stack__src mono" data-i18n="st.src">measured on the public repo, 2026-11-14</p>
+        <p class="stack__src mono" data-i18n="st.src">measured in the public repository on 2026-11-14</p>
       </div>
     </div>
   </section>
@@ -481,8 +483,8 @@
     <div class="wrap">
       <header class="section__head reveal">
         <p class="eyebrow" data-i18n="get.eyebrow">Get Skarbio</p>
-        <h2 data-i18n="get.h2">Three commands to your own copy</h2>
-        <p data-i18n="get.lead">Your build, your device, your data. No release APK yet — the source is the release channel.</p>
+        <h2 data-i18n="get.h2">Three steps to your own copy</h2>
+        <p data-i18n="get.lead">Your build, your device, your data. There is no release APK yet: the repository is the release channel.</p>
       </header>
 
       <ol class="steps3 reveal" style="--d:.05s">
@@ -529,7 +531,7 @@
         </details>
         <details class="qa reveal">
           <summary><span data-i18n="faq.5q">Is there a Play Store build?</span><i class="qa__mark" aria-hidden="true"></i></summary>
-          <p data-i18n="faq.5a">Not published today. This repository is the only release channel, and release signing config stays private.</p>
+          <p data-i18n="faq.5a">Not published today. This repository is the only release channel, and the release signing config stays private.</p>
         </details>
       </div>
     </div>
@@ -540,9 +542,9 @@
   <div class="wrap footer__grid">
     <div class="footer__brand">
       <a class="brand" href="#top"><img src="assets/logo-96.png" alt="" width="96" height="96" /><span>Skarbio</span></a>
-      <p data-i18n="ft.desc">Offline expense tracker for Android. Receipts, accounts, budgets, bills — all on the device.</p>
+      <p data-i18n="ft.desc">Offline expense tracker for Android. Receipts, accounts, budgets and bills, all on the device.</p>
     </div>
-    <nav class="footer__links" aria-label="Footer">
+    <nav class="footer__links" id="foot-links" aria-label="Footer">
       <h4 data-i18n="ft.h1">Project</h4>
       <a href="https://github.com/techparka/skarbio" rel="noopener">GitHub</a>
       <a href="https://github.com/techparka/skarbio#readme" rel="noopener" data-i18n="ft.readme">README</a>

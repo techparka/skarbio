@@ -1,4 +1,4 @@
-/* Skarbio — landing page. Bez frameworków, bez zewnętrznych żądań. */
+/* Skarbio: landing page. Bez frameworków, bez zewnętrznych żądań. */
 (() => {
   'use strict';
 
@@ -12,7 +12,7 @@
   };
 
   /* ── 1. Język PL/EN ─────────────────────────────────────────────────
-     Wersja EN to znacznik w HTML — jej kopią jest `EN` zrzutowana z DOM.
+     Wersja EN to znacznik w HTML; jej kopią jest `EN` zrzutowana z DOM.
      Słownik PL nadpisuje te same klucze (dozwolony prosty HTML).      */
   const EN = Object.create(null);
   const nodes = $$('[data-i18n]');
@@ -23,12 +23,12 @@
     'nav.demo': 'Demo', 'nav.features': 'Możliwości', 'nav.screens': 'Ekrany',
     'nav.privacy': 'Prywatność', 'nav.get': 'Pobierz', 'nav.github': 'GitHub',
 
-    'meta.title': 'Skarbio — polski budżet w telefonie, działa bez internetu',
-    'meta.desc': 'Skarbio skanuje paragony i faktury OCR-em na telefonie. Konta, budżety, rachunki — wszystko zostaje w urządzeniu. Bez konta, chmury i analityki.',
+    'meta.title': 'Skarbio: polski budżet w telefonie, działa bez internetu',
+    'meta.desc': 'Skarbio skanuje paragony i faktury OCR-em na telefonie. Konta, budżety, rachunki. Wszystko zostaje w urządzeniu. Bez konta, chmury i analityki.',
     'hero.badge': 'Android 7.0+ · v1.3.1 · bez rejestracji',
     'hero.h1a': 'Zrób zdjęcie paragonu.',
     'hero.h1b': 'Dane zostają u Ciebie.',
-    'hero.lead': 'Skarbio czyta paragony i faktury PDF OCR-em na telefonie, sam podciąga kategorię i pilnuje budżetu. Bez chmury i konta.',
+    'hero.lead': 'Skarbio czyta paragony i faktury PDF OCR-em na telefonie, sam podciąga kategorię i pilnuje budżetu. Bez chmury, konta i internetu.',
     'hero.cta1': 'Kod na GitHubie',
     'hero.cta2': 'Zobacz skanowanie →',
     'hero.chip1': 'Bez konta', 'hero.chip2': 'Bez reklam i analityki', 'hero.chip3': 'Działa w trybie samolotowym',
@@ -39,12 +39,12 @@
     'demo.h2': 'Papier wchodzi, wpis wychodzi',
     'demo.lead': 'Kliknij „Skanuj” i patrz, jak pola się zapełniają. Tylko OCR jest tu udawany.',
     'demo.tab1': 'Paragon', 'demo.tab2': 'Faktura',
-    'demo.hint': 'Przykładowe dane — nic nie wychodzi z tej strony. Prawdziwy OCR działa w Skarbio.',
+    'demo.hint': 'Przykładowe dane: nic nie wychodzi z tej strony. Prawdziwy OCR działa w Skarbio.',
     'demo.s1t': 'Zdjęcie', 'demo.s1d': 'Aparat, galeria albo PDF udostępniony z innej aplikacji',
     'demo.s2t': 'Rozpoznanie', 'demo.s2d': 'Rozpoznawanie tekstu ML Kit, liczone na telefonie',
     'demo.s3t': 'Zapis', 'demo.s3d': 'Jeden wiersz w lokalnej bazie Room, kategoria już wybrana',
     'demo.f.store': 'Sklep', 'demo.f.amount': 'Kwota', 'demo.f.date': 'Data', 'demo.f.cat': 'Kategoria',
-    'demo.recur': 'Rachunek cykliczny — zakładaj kolejne 12 miesięcy',
+    'demo.recur': 'Rachunek cykliczny (12 rat z góry)',
     'demo.scan': 'Skanuj dokument', 'demo.reset': 'Wyczyść',
     'demo.feed.empty': 'Tu pojawiają się wpisy zapisane w tym demo.',
 
@@ -75,27 +75,27 @@
     'sc.1': 'Pulpit', 'sc.2': 'Historia', 'sc.3': 'Konta', 'sc.4': 'Budżety', 'sc.5': 'Raporty', 'sc.6': 'Kalendarz',
 
     'pr.eyebrow': 'Prywatność', 'pr.h2': 'Nie ma serwera, który można by złamać',
-    'pr.lead': 'To nie obietnica w regulaminie — aplikacja po prostu nie ma gdzie wysłać twoich danych.',
+    'pr.lead': 'To nie obietnica w regulaminie: aplikacja po prostu nie ma gdzie wysłać twoich danych.',
     'pr.1': 'Bez rejestracji. Działa w momencie instalacji.',
-    'pr.2': 'Bez analityki, SDK reklam i crash reportów — build nie niesie żadnego.',
+    'pr.2': 'Bez analityki, SDK reklam i crash reportów. Build nie niesie żadnego z nich.',
     'pr.3': 'Bez synchronizacji. Wiersze leżą w bazie Room (SQLite) w telefonie.',
     'pr.4': 'Bez internetu dla OCR, parsowania, wykresów i kopii.',
     'pr.note': 'Jedno opcjonalne zapytanie: przy włączonym <i>pobieraniu nazw sklepów</i> numer NIP z paragonu idzie do publicznego rejestru VAT po oficjalną nazwę firmy. Domyślnie wyłączone. <a href="privacy-policy.html">Cała polityka</a>.',
     'pr.device': 'ten telefon', 'pr.out': 'bajtów wyszło z telefonu',
 
     'st.eyebrow': 'Pod maską', 'st.h2': 'Natywny Kotlin. Bez nakładki, bez backendu.',
-    'st.lead': 'Jeden APK, ekrany w XML-u, baza Room i ML Kit. Na jedno wieczorne czytanie.',
-    'st.src': 'zmierzone w publicznym repo, 2026-11-14',
+    'st.lead': 'Jeden APK, ekrany w XML-u, baza Room i ML Kit. Jeśli znasz Androida, przeczytasz to w jeden wieczór.',
+    'st.src': 'zmierzone w publicznym repozytorium 2026-11-14',
 
-    'get.eyebrow': 'Skąd wziąć', 'get.h2': 'Trzy komendy do własnej kopii',
-    'get.lead': 'Twój build, twój telefon, twoje dane. Publicznego APK brak — kanałem wydania jest repozytorium.',
+    'get.eyebrow': 'Skąd wziąć', 'get.h2': 'Trzy kroki do własnej kopii',
+    'get.lead': 'Twój build, twój telefon, twoje dane. Publicznego APK jeszcze nie ma: kanałem wydania jest repozytorium.',
     'get.1t': 'Sklonuj repozytorium',
     'get.2t': 'Otwórz katalog w Android Studio', 'get.2d': 'JDK 17 i jedna synchronizacja Gradle.',
     'get.3t': 'Zbuduj APK debug i zainstaluj',
     'get.cta': 'Otwórz repozytorium', 'get.cta2': 'README i uwagi o budowie',
     'faq.h3': 'Pytania, które naprawdę padają',
     'faq.1q': 'To jest open source?',
-    'faq.1a': 'Kod jest publiczny i czytelny, ale plik licencji jeszcze nie powstał, więc na razie zastrzegam sobie wszystkie prawa. Chcesz coś wykorzystać — otwórz issue i pogadajmy.',
+    'faq.1a': 'Kod jest publiczny i czytelny, ale plik licencji jeszcze nie powstał, więc na razie zastrzegam sobie wszystkie prawa. Chcesz coś wykorzystać? Otwórz issue i pogadajmy.',
     'faq.2q': 'Czy aplikacja potrzebuje internetu?',
     'faq.2a': 'Nie. OCR, parsowanie faktur, wykresy, kopie i przypomnienia działają offline. Jedyna funkcja sieciowa to opcjonalne sprawdzanie NIP w rejestrze VAT, domyślnie wyłączone.',
     'faq.3q': 'Na jakich telefonach?',
@@ -105,7 +105,7 @@
     'faq.5q': 'Czy jest w Google Play?',
     'faq.5a': 'Dziś nie ma. To repozytorium jest jedynym kanałem wydania, a konfiguracja podpisu wydania pozostaje prywatna.',
 
-    'ft.desc': 'Aplikacja budżetowa na Androida, bez chmury. Paragony, konta, budżety i rachunki — wszystko na urządzeniu.',
+    'ft.desc': 'Aplikacja budżetowa na Androida, bez chmury. Paragony, konta, budżety i rachunki, wszystko na urządzeniu.',
     'ft.h1': 'Projekt', 'ft.readme': 'README', 'ft.issues': 'Issues', 'ft.policy': 'Polityka prywatności',
     'ft.h2': 'Status', 'ft.license': 'Kod publiczny, licencja jeszcze nieogłoszona.',
     'ft.made': 'Pisana przez jednego człowieka, kodzona z Claude Code.',
@@ -116,14 +116,25 @@
     'lang-btn': ['Switch language', 'Zmień język'],
     'theme-btn': ['Switch color theme', 'Zmień motyw kolorów'],
     'menu-btn': ['Open menu', 'Otwórz menu'],
+    'nav-links': ['Sections', 'Sekcje'],
+    'rail': ['App screenshots', 'Zrzuty ekranu'],
     'rail-prev': ['Previous screen', 'Poprzedni ekran'],
     'rail-next': ['Next screen', 'Następny ekran'],
+    'rail-dots': ['Screen pages', 'Strony ekranów'],
+    'tabs': ['Document type', 'Rodzaj dokumentu'],
+    'more': ['More features', 'Więcej funkcji'],
+    'donut': ['Sample monthly spending split: Groceries 34%, Bills 24%, Restaurants 18%, Transport 12%, Other 12%', 'Przykładowy podział wydatków w miesiącu: Zakupy spożywcze 34%, Rachunki 24%, Restauracje 18%, Transport 12%, Pozostałe 12%'],
+    'foot-links': ['Footer', 'Stopka'],
+    'brand': ['Skarbio home', 'Skarbio: strona glówna'],
     'lb-close': ['Close', 'Zamknij'],
     'lb-prev': ['Previous screen', 'Poprzedni ekran'],
     'lb-next': ['Next screen', 'Następny ekran']
   };
 
-  let lang = LS.get('skarbio.lang') === 'pl' || (!LS.get('skarbio.lang') && (navigator.language || 'en').toLowerCase().startsWith('pl')) ? 'pl' : 'en';
+  /* Angielski jest językiem wydanym strony; polski pozostaje jeden klik dalej,
+     więc wybór zapamiętujemy, ale nie narzucamy go po lang przeglądarki. */
+  let lang = LS.get('skarbio.lang') === 'pl' ? 'pl' : 'en';
+  let interfejsGotowy = false;
 
   function applyLang(next) {
     lang = next;
@@ -142,6 +153,7 @@
       if (el) el.setAttribute('aria-label', ARIA[id][lang === 'pl' ? 1 : 0]);
     });
     $$('.code__copy').forEach(b => b.setAttribute('aria-label', lang === 'pl' ? 'Kopiuj komendę' : 'Copy command'));
+    if (interfejsGotowy) etykietyKropek();
     $('#lang-label').textContent = lang === 'pl' ? 'EN' : 'PL';
     LS.set('skarbio.lang', lang);
     document.dispatchEvent(new CustomEvent('lang', { detail: lang }));
@@ -236,15 +248,17 @@
   /* ── 5. Demo skanowania ──────────────────────────────────────────── */
   const paper = $('#paper'), scanBtn = $('#scan-btn'), scanLabel = $('#scan-label'), resetBtn = $('#reset-btn');
   const stepEls = $$('#steps .step'), feed = $('#feed'), recurRow = $('#recur-row'), recur = $('#recur');
+  /* Dane przykładowe: [polski, angielski], nazwy kategorii i typy dokumentów
+     są takie jak w samych zasobach aplikacji (values/strings.xml, values-pl). */
   const DOC = {
     receipt: {
-      store: 'Sklep Spożywczy', amount: '58,40 zł',
-      date: ['12 cze 2026', '12 cze 2026'], cat: 'Zakupy spożywcze', color: '#4ADE80',
-      sub: ['Rachunek', 'Paragon']
+      store: ['Sklep Spożywczy', 'Grocery store'], amount: ['58,40 zł', 'PLN 58.40'],
+      date: ['12 cze 2026', '12 Jun 2026'], cat: ['Zakupy spożywcze', 'Groceries'], color: '#4ADE80',
+      sub: ['Rachunek', 'Receipt']
     },
     invoice: {
-      store: 'Enea Operator', amount: '312,42 zł',
-      date: ['20 cze 2026', '20 Jun 2026'], cat: 'Energia', color: '#FB923C',
+      store: ['Enea Operator', 'Enea Operator'], amount: ['312,42 zł', 'PLN 312.42'],
+      date: ['20 cze 2026', '20 Jun 2026'], cat: ['Energia', 'Energy'], color: '#FB923C',
       sub: ['Rachunek · termin', 'Bill · due date']
     }
   };
@@ -254,12 +268,13 @@
     save: ['Save entry', 'Zapisz wpis'],
     reading: ['Reading text…', 'Czytam tekst…'],
     saved: ['Saved on this device', 'Zapisane na tym urządzeniu'],
-    demoNote: ['demo — nothing leaves this page', 'demo — nic nie opuszcza tej strony'],
+    demoNote: ['demo: nothing leaves this page', 'demo: nic nie opuszcza tej strony'],
     cleared: ['Cleared', 'Wyczyszczone'],
     copied: ['Copied to clipboard', 'Skopiowane do schowka'],
     bills: ['12 rat założonych z góry', '12 rat z góry w kalendarzu']
   };
   const d = k => DYN[k] ? DYN[k][lang === 'pl' ? 1 : 0] : '';
+  const dl = para => para[lang === 'pl' ? 0 : 1];
   let docKind = 'receipt', phase = 'idle', timers = [];
 
   const fieldEls = {
@@ -274,16 +289,17 @@
   };
   const clearFields = () => {
     Object.values(fieldEls).forEach(b => b.classList.remove('filled'));
-    $('.val', fieldEls.store).textContent = '—';
-    $('.val', fieldEls.amount).textContent = '—';
-    $('.val', fieldEls.date).textContent = '—';
-    $('.cat__txt', fieldEls.cat).textContent = '—';
+    /* puste, a nie kreska: CSS domaluje pole do uzupełnienia */
+    $('.val', fieldEls.store).textContent = '';
+    $('.val', fieldEls.amount).textContent = '';
+    $('.val', fieldEls.date).textContent = '';
+    $('.cat__txt', fieldEls.cat).textContent = '';
     $('.cat', fieldEls.cat).classList.remove('is-set');
   };
   const hasEntries = () => !!feed.querySelector('li:not(.feed__empty)');
   const setPhase = p => {
     phase = p;
-    // nie `disabled` — wyłuczone pole gubi koncentracje, a tego nie lubia klawiatura
+    // nie `disabled`: wyłączone pole traci fokus, a tego nie lubi klawiatura
     scanBtn.classList.toggle('is-waiting', p === 'reading');
     scanBtn.setAttribute('aria-disabled', p === 'reading' ? 'true' : 'false');
     scanLabel.textContent = p === 'reading' ? d('reading')
@@ -292,8 +308,13 @@
     resetBtn.hidden = p === 'idle';
   };
 
+  function anulujSkan() {
+    timers.forEach(clearTimeout); timers = [];
+    paper.classList.remove('is-scan');
+  }
+
   function setDoc(kind) {
-    if (phase === 'reading') return;
+    anulujSkan();
     docKind = kind;
     $$('.tab').forEach(b => {
       const on = b.dataset.doc === kind;
@@ -323,12 +344,12 @@
     stepEls[0].classList.add('is-run');
     hit(420, () => { stepEls[0].classList.replace('is-run', 'is-done'); stepEls[1].classList.add('is-run'); });
     const D = DOC[docKind];
-    hit(900, () => set('store', D.store));
-    hit(1250, () => set('amount', D.amount));
-    hit(1600, () => set('date', D.date[lang === 'pl' ? 0 : 1]));
+    hit(900, () => set('store', dl(D.store)));
+    hit(1250, () => set('amount', dl(D.amount)));
+    hit(1600, () => set('date', dl(D.date)));
     hit(1950, () => {
       const chip = $('.cat', fieldEls.cat);
-      $('.cat__txt', chip).textContent = D.cat;
+      $('.cat__txt', chip).textContent = dl(D.cat);
       chip.style.setProperty('--c', D.color);
       chip.classList.add('is-set');
       set('cat', chip.outerHTML);
@@ -341,14 +362,26 @@
     });
   }
 
+  /* wpis zapamiętuje tylko rodzaj dokumentu; tekst dokładamy w aktualnym języku */
+  function uzupelnijWpis(li) {
+    const D = DOC[li.dataset.doc];
+    if (!D) return;
+    const raty = li.dataset.raty === '1';
+    $('.ent__store', li).textContent = dl(D.store);
+    $('.ent__meta', li).textContent = dl(D.sub) + ' · ' + dl(D.date) + (raty ? ' · ' + d('bills') : '');
+    $('.ent__amount', li).textContent = dl(D.amount);
+  }
+
   function save() {
     const D = DOC[docKind];
-    const bills = docKind === 'invoice' && recur.checked;
+    const raty = docKind === 'invoice' && recur.checked;
     $$('.feed__empty', feed).forEach(n => n.remove());
     const li = document.createElement('li');
-    li.innerHTML = `<i style="--c:${D.color}"></i><span><b style="font-weight:600">${D.store}</b>` +
-      `<small>${D.sub[lang === 'pl' ? 0 : 1]} · ${D.date[lang === 'pl' ? 0 : 1]}${bills ? ' · ' + d('bills') : ''}</small></span>` +
-      `<b>${D.amount}</b>`;
+    li.dataset.doc = docKind;
+    li.dataset.raty = raty ? '1' : '0';
+    li.innerHTML = `<i style="--c:${D.color}"></i><span><b class="ent__store"></b>` +
+      `<small class="ent__meta"></small></span><b class="ent__amount"></b>`;
+    uzupelnijWpis(li);
     feed.prepend(li);
     while (feed.children.length > 3) feed.lastElementChild.remove();
     setPhase('idle');
@@ -356,6 +389,7 @@
   }
 
   function reset() {
+    anulujSkan();
     clearFields();
     stepEls.forEach(s => s.classList.remove('is-run', 'is-done'));
     setPhase('idle');
@@ -381,7 +415,12 @@
     setPhase(phase);
     if (phase !== 'reading') {
       const D = DOC[docKind];
-      if (fieldEls.date.classList.contains('filled')) set('date', D.date[lang === 'pl' ? 0 : 1]);
+      if (fieldEls.store.classList.contains('filled')) set('store', dl(D.store));
+      if (fieldEls.amount.classList.contains('filled')) set('amount', dl(D.amount));
+      if (fieldEls.date.classList.contains('filled')) set('date', dl(D.date));
+      const txt = $('.cat .cat__txt', fieldEls.cat);
+      if (txt && fieldEls.cat.classList.contains('filled')) txt.textContent = dl(D.cat);
+      $$('li', feed).forEach(uzupelnijWpis);
     }
   });
 
@@ -404,47 +443,77 @@
   }
 
   /* ── 7. Galeria ekranów + lightbox ───────────────────────────────── */
-  const rail = $('#rail'), shots = $$('.shot', rail), dotsBox = $('#rail-dots');
-  shots.forEach((s, i) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.setAttribute('aria-label', (s.querySelector('.shot__cap') || {}).textContent || ('screen ' + (i + 1)));
-    b.setAttribute('aria-current', i === 0 ? 'true' : 'false');
-    b.addEventListener('click', () => goTo(i));
-    dotsBox.appendChild(b);
-  });
-  const dots = $$('button', dotsBox);
-  const center = () => rail.scrollLeft + rail.clientWidth / 2;
+  const rail = $('#rail'), shots = $$('.shot', rail), dotsBox = $('#rail-dots'), licznik = $('#rail-licznik');
+  let strony = [], idx = -1;
 
-  function goTo(i) {
-    const el = shots[Math.max(0, Math.min(shots.length - 1, i))];
-    const rr = rail.getBoundingClientRect(), er = el.getBoundingClientRect();
-    rail.scrollTo({
-      left: rail.scrollLeft + (er.left - rr.left) - (rail.clientWidth - er.width) / 2,
-      behavior: reduce() ? 'auto' : 'smooth'
-    });
-  }
-  let idx = 0;
-  function railScroll() {
-    const mid = center(), rr = rail.getBoundingClientRect();
-    let best = 0, bd = 1e9;
+  /* Kropki to osiagalne strony tasmy, a nie jej telefony. Przy pieciu telefonach
+     w kadrze szesc kropek dawaloby dwoom ostatnim ten sam przesuw i klikanie
+     wydawaloby sie niesprawne. */
+  function liczenieStron() {
+    const max = rail.scrollWidth - rail.clientWidth;
+    if (max <= 1) return [{ lewo: 0, telefon: 0 }];
+    const r = rail.getBoundingClientRect();
+    const out = [];
     shots.forEach((s, i) => {
-      const er = s.getBoundingClientRect();
-      const dist = Math.abs(er.left - rr.left + er.width / 2 - rail.clientWidth / 2);
-      if (dist < bd) { bd = dist; best = i; }
+      const lewo = Math.min(max, Math.max(0, Math.round(s.getBoundingClientRect().left - r.left + rail.scrollLeft)));
+      if (!out.length || lewo - out[out.length - 1].lewo > 24) out.push({ lewo, telefon: i });
     });
-    if (best !== idx) {
-      idx = best;
-      dots.forEach((b, i) => b.setAttribute('aria-current', String(i === idx)));
-      shots.forEach((s, i) => s.classList.toggle('is-active', i === idx));
-    }
+    return out;
   }
-  rail.addEventListener('scroll', () => requestAnimationFrame(railScroll), { passive: true });
-  $('#rail-prev').addEventListener('click', () => goTo(idx - 1));
-  $('#rail-next').addEventListener('click', () => goTo(idx + 1));
+
+  function etykietyKropek() {
+    $$('button', dotsBox).forEach((b, i) => {
+      const z = strony[i] ? shots[strony[i].telefon] : null;
+      const nazwa = z ? ((z.querySelector('.shot__cap') || {}).textContent || '') : String(i + 1);
+      const tekst = (lang === 'pl' ? 'Od ' : 'From ') + nazwa;
+      b.setAttribute('aria-label', tekst);
+      b.title = tekst;
+    });
+  }
+
+  function przebuduj() {
+    const byl = $$('button', dotsBox).indexOf(document.activeElement);
+    strony = liczenieStron();
+    dotsBox.textContent = '';
+    strony.forEach((_, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.addEventListener('click', () => idzDoStrony(i));
+      dotsBox.appendChild(b);
+    });
+    etykietyKropek();
+    if (byl >= 0) { const k = $$('button', dotsBox)[byl]; if (k) k.focus({ preventScroll: true }); }
+    idx = -1;
+    odswiez();
+  }
+
+  function idzDoStrony(i) {
+    const s = strony[Math.max(0, Math.min(strony.length - 1, i))];
+    if (!s) return;
+    rail.scrollTo({ left: s.lewo, behavior: reduce() ? 'auto' : 'smooth' });
+  }
+
+  function odswiez() {
+    const kropki = $$('button', dotsBox);
+    if (!strony.length || !kropki.length) return;
+    const max = rail.scrollWidth - rail.clientWidth;
+    let b = 0;
+    strony.forEach((s, i) => { if (rail.scrollLeft >= s.lewo - 24) b = i; });
+    if (max - rail.scrollLeft < 2) b = strony.length - 1;
+    if (b === idx) return;
+    idx = b;
+    kropki.forEach((k, i) => k.setAttribute('aria-current', String(i === idx)));
+    const od = strony[idx].telefon, granica = idx + 1 < strony.length ? strony[idx + 1].telefon : shots.length;
+    shots.forEach((s, i) => s.classList.toggle('is-active', i >= od && i < granica));
+    if (licznik) licznik.textContent = (idx + 1) + '/' + strony.length;
+  }
+
+  rail.addEventListener('scroll', () => requestAnimationFrame(odswiez), { passive: true });
+  $('#rail-prev').addEventListener('click', () => idzDoStrony(idx - 1));
+  $('#rail-next').addEventListener('click', () => idzDoStrony(idx + 1));
   rail.addEventListener('keydown', e => {
-    if (e.key === 'ArrowRight') { e.preventDefault(); goTo(idx + 1); }
-    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(idx - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); idzDoStrony(idx + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); idzDoStrony(idx - 1); }
   });
 
   /* przeciąganie taśmy palcem/myszą */
@@ -463,6 +532,16 @@
   ['pointerup', 'pointercancel', 'pointerleave'].forEach(ev => rail.addEventListener(ev, () => {
     drag = null; rail.classList.remove('is-drag');
   }));
+
+  /* kropek przybywa i ubywa wraz z szerokoscia okna */
+  przebuduj();
+  interfejsGotowy = true;
+  let miarka = 0;
+  if (window.ResizeObserver) {
+    new ResizeObserver(() => { clearTimeout(miarka); miarka = setTimeout(przebuduj, 140); }).observe(rail);
+  }
+  window.addEventListener('resize', () => { clearTimeout(miarka); miarka = setTimeout(przebuduj, 140); });
+  window.addEventListener('load', przebuduj);
 
   /* podświetlenie podążające za kursorem na kaflach i krokach */
   if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
@@ -532,9 +611,8 @@
   setDoc('receipt');
   applyLang(lang);
   onScroll();
-  railScroll();
 
-  /* Jedno automatyczne, nieproszone skanowanie — gdy demo wjedzie w kadr. */
+  /* Jedno automatyczne, nieproszone skanowanie: gdy demo wjedzie w kadr. */
   if (!reduce()) {
     const demoIO = new IntersectionObserver(es => {
       es.forEach(e => {
