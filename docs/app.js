@@ -16,28 +16,32 @@
      Słownik PL nadpisuje te same klucze (dozwolony prosty HTML).      */
   const EN = Object.create(null);
   const nodes = $$('[data-i18n]');
+  const images = $$('[data-i18n-alt]');
+  images.forEach(img => { EN[img.dataset.i18nAlt] = img.alt; });
   nodes.forEach(n => { EN[n.dataset.i18n] = n.innerHTML; });
 
   const PL = {
     'a.skip': 'Przejdź do treści',
     'nav.demo': 'Demo', 'nav.features': 'Możliwości', 'nav.screens': 'Ekrany',
-    'nav.privacy': 'Prywatność', 'nav.get': 'Pobierz', 'nav.github': 'GitHub',
+    'nav.privacy': 'Prywatność', 'nav.get': 'Instalacja', 'nav.github': 'GitHub',
 
     'meta.title': 'Skarbio: polski budżet w telefonie, działa bez internetu',
-    'meta.desc': 'Skarbio skanuje paragony i faktury OCR-em na telefonie. Konta, budżety, rachunki. Wszystko zostaje w urządzeniu. Bez konta, chmury i analityki.',
-    'hero.badge': 'Android 7.0+ · v1.3.1 · bez rejestracji',
-    'hero.h1a': 'Zrób zdjęcie paragonu.',
+    'meta.desc': 'Skarbio skanuje paragony i faktury OCR-em na telefonie. Konta, budżety, rachunki. Wszystko zostaje w urządzeniu. Bez konta i synchronizacji z chmurą.',
+    'hero.badge': 'Android 7.0+ · v1.3.1',
+    'hero.h1a': 'Zeskanuj paragon.',
     'hero.h1b': 'Dane zostają u Ciebie.',
-    'hero.lead': 'Skarbio czyta paragony i faktury PDF OCR-em na telefonie, sam podciąga kategorię i pilnuje budżetu. Bez chmury, konta i internetu.',
-    'hero.cta1': 'Kod na GitHubie',
-    'hero.cta2': 'Zobacz skanowanie →',
-    'hero.chip1': 'Bez konta', 'hero.chip2': 'Bez reklam i analityki', 'hero.chip3': 'Działa w trybie samolotowym',
-    'hero.stat1': 'na urządzeniu', 'hero.stat2': 'haseł sklepów', 'hero.stat3': 'kategorii z bazy', 'hero.stat4': 'serwerów w chmurze',
+    'hero.lead': 'Skarbio pomaga śledzić wydatki, konta i rachunki na telefonie. Zeskanuj paragon lub wczytaj fakturę PDF, sprawdź odczytane dane i zobacz, ile zostało w budżecie.',
+    'hero.cta1': 'Wypróbuj skanowanie →',
+    'hero.cta2': 'Zainstaluj z kodu',
+    'hero.alt': 'Pulpit Skarbio z saldami kont, miesięcznymi wydatkami i nadchodzącymi rachunkami',
+    'hero.pop.category': 'Zakupy', 'hero.pop.amount': '58,40 zł', 'hero.pop.budget': 'Budżet · 78%',
+    'hero.chip1': 'Bez konta', 'hero.chip2': 'Bez reklam', 'hero.chip3': 'OCR na telefonie',
+    'hero.stat1': 'lokalne rozpoznawanie tekstu', 'hero.stat2': 'haseł sklepów', 'hero.stat3': 'kategorii z bazy', 'hero.stat4': 'serwerów w chmurze',
     'hero.scroll': 'scroll',
 
     'demo.eyebrow': 'Demo interaktywne',
     'demo.h2': 'Papier wchodzi, wpis wychodzi',
-    'demo.lead': 'Kliknij „Skanuj” i patrz, jak pola się zapełniają. Tylko OCR jest tu udawany.',
+    'demo.lead': 'Wybierz paragon lub fakturę i wypróbuj symulację skanowania.',
     'demo.tab1': 'Paragon', 'demo.tab2': 'Faktura',
     'demo.hint': 'Przykładowe dane: nic nie wychodzi z tej strony. Prawdziwy OCR działa w Skarbio.',
     'demo.s1t': 'Zdjęcie', 'demo.s1d': 'Aparat, galeria albo PDF udostępniony z innej aplikacji',
@@ -49,61 +53,61 @@
     'demo.feed.empty': 'Tu pojawiają się wpisy zapisane w tym demo.',
 
     'feat.eyebrow': 'Co jest w środku',
-    'feat.h2': 'Aplikacja do budżetu, nie platforma fintech',
-    'feat.lead': 'Wszystko liczy się lokalnie. Nic nie pyta o twojego maila.',
+    'feat.h2': 'Codzienne wydatki pod kontrolą',
     'feat.1t': 'Paragony i faktury',
-    'feat.1d': 'Zdjęcie z aparatu, galerii albo PDF z innej aplikacji. OCR na urządzeniu wyciąga kontrahenta, kwotę i datę, a przy powtórce od razu ostrzega.',
-    'feat.2t': 'Kategorie same',
-    'feat.2d': '220 haseł sklepów i dopasowanie nieostre, więc „Biedronka” z literówką trafi w Zakupy spożywcze.',
-    'feat.3t': 'Budżet, który się upomina',
+    'feat.1d': 'Zeskanuj zdjęcie lub wczytaj PDF. Sprawdź sprzedawcę, kwotę i datę przed zapisem. Skarbio ostrzega o możliwych duplikatach paragonów.',
+    'feat.2t': 'Automatyczny dobór kategorii',
+    'feat.2d': 'Skarbio korzysta z 220 polskich słów kluczowych, żeby podpowiedzieć kategorię. Rozpoznaje też nazwy sklepów z literówkami.',
+    'feat.3t': 'Budżety kategorii',
     'feat.3d': 'Miesięczny limit na kategorię, pasek postępu i sygnał przy 80%.',
     'feat.4t': 'Rachunki i przypomnienia',
     'feat.4d': 'Czynsz, internet, prąd: terminy, zaległości i powiadomienie przed płatnością.',
     'feat.5t': 'Na co poszło',
-    'feat.5d': 'Tapnij wycinek, zobaczysz kategorię. Tu najedź na legendę.',
+    'feat.5d': 'Wybierz kategorię, żeby podświetlić jej udział w przykładowych wydatkach.',
 
     'feat.6t': 'Szyfrowane kopie',
     'feat.6d': 'Jeden plik <code>.skb</code> ze wszystkim, opcjonalnie zamknięty AES-256-GCM. CSV wchodzi i wychodzi.',
 
-    'more.1': 'Konta i przelewanie', 'more.2': 'Wspólny stan kont', 'more.3': 'Trend 6 miesięcy, największe sklepy',
+    'more.1': 'Konta i przelewy', 'more.2': 'Wspólny stan kont', 'more.3': 'Trend 6 miesięcy, największe sklepy',
     'more.4': 'Blokada odciskiem lub PIN', 'more.5': 'Widget skanowania na pulpicie',
     'more.6': 'Udostępnianie PDF prosto do Skarbio', 'more.7': 'PLN · EUR · USD',
     'more.8': 'Motyw jasny i ciemny', 'more.9': 'Interfejs polski i angielski', 'more.10': 'Własne kategorie',
 
-    'sc.eyebrow': 'Ekrany', 'sc.h2': 'Sześć ekranów, na których się żyje',
-    'sc.lead': 'Domyślnie ciemny, jasny na żądanie. Tapnij telefon, żeby powiększyć.',
+    'sc.eyebrow': 'Ekrany', 'sc.h2': 'Zobacz Skarbio od środka',
+    'sc.lead': 'Wybierz zrzut, żeby go powiększyć.',
     'sc.1': 'Pulpit', 'sc.2': 'Historia', 'sc.3': 'Konta', 'sc.4': 'Budżety', 'sc.5': 'Raporty', 'sc.6': 'Kalendarz',
 
-    'pr.eyebrow': 'Prywatność', 'pr.h2': 'Nie ma serwera, który można by złamać',
-    'pr.lead': 'To nie obietnica w regulaminie: aplikacja po prostu nie ma gdzie wysłać twoich danych.',
-    'pr.1': 'Bez rejestracji. Działa w momencie instalacji.',
-    'pr.2': 'Bez analityki, SDK reklam i crash reportów. Build nie niesie żadnego z nich.',
-    'pr.3': 'Bez synchronizacji. Wiersze leżą w bazie Room (SQLite) w telefonie.',
-    'pr.4': 'Bez internetu dla OCR, parsowania, wykresów i kopii.',
-    'pr.note': 'Jedno opcjonalne zapytanie: przy włączonym <i>pobieraniu nazw sklepów</i> numer NIP z paragonu idzie do publicznego rejestru VAT po oficjalną nazwę firmy. Domyślnie wyłączone. <a href="privacy-policy.html">Cała polityka</a>.',
-    'pr.device': 'ten telefon', 'pr.out': 'bajtów wyszło z telefonu',
+    'pr.eyebrow': 'Prywatność', 'pr.h2': 'Twoje dane zostają na telefonie',
+    'pr.1': 'Bez rejestracji i zakładania konta.',
+    'pr.2': 'Skarbio nie wyświetla reklam ani nie prowadzi własnej analityki.',
+    'pr.3': 'Transakcje, konta i rachunki są zapisane lokalnie w bazie SQLite.',
+    'pr.4': 'OCR działa offline po pobraniu komponentów skanera przez Usługi Google Play.',
+    'pr.note': 'Jeśli włączysz <i>pobieranie nazw sklepów</i>, Skarbio wyśle NIP z paragonu do publicznego rejestru VAT, żeby ustalić nazwę firmy. Opcja jest domyślnie wyłączona. <a href="privacy-policy.html">Cała polityka</a>.',
+    'pr.wire.1': 'synchronizacja', 'pr.wire.2': 'rejestracja',
+    'pr.wire.3': 'sieć reklamowa', 'pr.wire.4': 'wysyłanie paragonów',
+    'pr.device': 'ten telefon', 'pr.out': 'usług synchronizacji w chmurze',
 
-    'st.eyebrow': 'Pod maską', 'st.h2': 'Natywny Kotlin. Bez nakładki, bez backendu.',
-    'st.lead': 'Jeden APK, ekrany w XML-u, baza Room i ML Kit. Jeśli znasz Androida, przeczytasz to w jeden wieczór.',
+    'st.eyebrow': 'Pod maską', 'st.h2': 'Natywna aplikacja na Androida w Kotlinie',
     'st.src': 'zmierzone w publicznym repozytorium 2026-11-14',
 
-    'get.eyebrow': 'Skąd wziąć', 'get.h2': 'Trzy kroki do własnej kopii',
-    'get.lead': 'Twój build, twój telefon, twoje dane. Publicznego APK jeszcze nie ma: kanałem wydania jest repozytorium.',
+    'get.eyebrow': 'Instalacja', 'get.h2': 'Zainstaluj Skarbio z kodu źródłowego',
+    'get.lead': 'Potrzebujesz komputera z Android Studio. Obecnie nie ma gotowego APK ani wydania w Google Play.',
     'get.1t': 'Sklonuj repozytorium',
-    'get.2t': 'Otwórz katalog w Android Studio', 'get.2d': 'JDK 17 i jedna synchronizacja Gradle.',
-    'get.3t': 'Zbuduj APK debug i zainstaluj',
-    'get.cta': 'Otwórz repozytorium', 'get.cta2': 'README i uwagi o budowie',
-    'faq.h3': 'Pytania, które naprawdę padają',
+    'get.2t': 'Otwórz katalog w Android Studio', 'get.2d': 'Użyj JDK 17 i Android SDK Platform 35. Poczekaj na synchronizację Gradle.',
+    'get.3t': 'Uruchom aplikację na Androidzie',
+    'get.3d': 'Podłącz telefon lub uruchom emulator. Wybierz urządzenie w Android Studio i kliknij <strong>Run</strong>.',
+    'get.cta': 'Otwórz repozytorium', 'get.cta2': 'Instrukcja budowania',
+    'faq.h3': 'Częste pytania',
     'faq.1q': 'To jest open source?',
     'faq.1a': 'Kod jest publiczny i czytelny, ale plik licencji jeszcze nie powstał, więc na razie zastrzegam sobie wszystkie prawa. Chcesz coś wykorzystać? Otwórz issue i pogadajmy.',
     'faq.2q': 'Czy aplikacja potrzebuje internetu?',
-    'faq.2a': 'Nie. OCR, parsowanie faktur, wykresy, kopie i przypomnienia działają offline. Jedyna funkcja sieciowa to opcjonalne sprawdzanie NIP w rejestrze VAT, domyślnie wyłączone.',
+    'faq.2a': 'OCR działa na telefonie. Przed pierwszym skanem Usługi Google Play mogą potrzebować internetu, żeby pobrać model OCR i komponenty skanera. Internet jest też potrzebny do opcjonalnego sprawdzania NIP w rejestrze VAT. Ta funkcja jest domyślnie wyłączona.',
     'faq.3q': 'Na jakich telefonach?',
-    'faq.3a': 'Android 7.0 (API 24) i nowsze, w pierwszej kolejności telefony w pionie. Aparat pomaga, ale można też wczytać zdjęcie lub PDF z galerii i innych aplikacji.',
+    'faq.3a': 'Skarbio wymaga Androida 7.0 (API 24) lub nowszego. Do skanowania z ML Kit potrzebne są Usługi Google Play.',
     'faq.4q': 'Jak wyniosę swoje dane?',
     'faq.4a': 'Eksport CSV do arkusza, import CSV, żeby wejść, plus pełna kopia <code>.skb</code>, którą zaszyfrujesz AES-256-GCM i hasłem.',
     'faq.5q': 'Czy jest w Google Play?',
-    'faq.5a': 'Dziś nie ma. To repozytorium jest jedynym kanałem wydania, a konfiguracja podpisu wydania pozostaje prywatna.',
+    'faq.5a': 'Skarbio jest dostępne jako kod źródłowy na GitHubie. Możesz uruchomić aplikację według instrukcji powyżej.',
 
     'ft.desc': 'Aplikacja budżetowa na Androida, bez chmury. Paragony, konta, budżety i rachunki, wszystko na urządzeniu.',
     'ft.h1': 'Projekt', 'ft.readme': 'README', 'ft.issues': 'Issues', 'ft.policy': 'Polityka prywatności',
@@ -125,7 +129,7 @@
     'more': ['More features', 'Więcej funkcji'],
     'donut': ['Sample monthly spending split: Groceries 34%, Bills 24%, Restaurants 18%, Transport 12%, Other 12%', 'Przykładowy podział wydatków w miesiącu: Zakupy spożywcze 34%, Rachunki 24%, Restauracje 18%, Transport 12%, Pozostałe 12%'],
     'foot-links': ['Footer', 'Stopka'],
-    'brand': ['Skarbio home', 'Skarbio: strona glówna'],
+    'brand': ['Skarbio home', 'Skarbio: strona główna'],
     'lb-close': ['Close', 'Zamknij'],
     'lb-prev': ['Previous screen', 'Poprzedni ekran'],
     'lb-next': ['Next screen', 'Następny ekran']
@@ -143,6 +147,7 @@
       const key = n.dataset.i18n;
       if (key in dict) n.innerHTML = dict[key];
     });
+    images.forEach(img => { img.alt = dict[img.dataset.i18nAlt] || EN[img.dataset.i18nAlt]; });
     root.lang = lang === 'pl' ? 'pl' : 'en';
     const title = PL['meta.title'], desc = PL['meta.desc'];
     document.title = lang === 'pl' ? title : EN_TITLE;
@@ -254,7 +259,7 @@
     receipt: {
       store: ['Sklep Spożywczy', 'Grocery store'], amount: ['58,40 zł', 'PLN 58.40'],
       date: ['12 cze 2026', '12 Jun 2026'], cat: ['Zakupy spożywcze', 'Groceries'], color: '#4ADE80',
-      sub: ['Rachunek', 'Receipt']
+      sub: ['Paragon', 'Receipt']
     },
     invoice: {
       store: ['Enea Operator', 'Enea Operator'], amount: ['312,42 zł', 'PLN 312.42'],
@@ -264,14 +269,14 @@
   };
   const DYN = {
     scan: ['Scan document', 'Skanuj dokument'],
-    scanNext: ['Scan the other one', 'Przeskanuj drugi'],
+    scanNext: ['Scan again', 'Skanuj ponownie'],
     save: ['Save entry', 'Zapisz wpis'],
     reading: ['Reading text…', 'Czytam tekst…'],
-    saved: ['Saved on this device', 'Zapisane na tym urządzeniu'],
+    saved: ['Saved in the demo', 'Zapisano w demo'],
     demoNote: ['demo: nothing leaves this page', 'demo: nic nie opuszcza tej strony'],
     cleared: ['Cleared', 'Wyczyszczone'],
     copied: ['Copied to clipboard', 'Skopiowane do schowka'],
-    bills: ['12 rat założonych z góry', '12 rat z góry w kalendarzu']
+    bills: ['12 monthly installments in the calendar', '12 rat z góry w kalendarzu']
   };
   const d = k => DYN[k] ? DYN[k][lang === 'pl' ? 1 : 0] : '';
   const dl = para => para[lang === 'pl' ? 0 : 1];
@@ -413,15 +418,13 @@
 
   document.addEventListener('lang', () => {
     setPhase(phase);
-    if (phase !== 'reading') {
-      const D = DOC[docKind];
-      if (fieldEls.store.classList.contains('filled')) set('store', dl(D.store));
-      if (fieldEls.amount.classList.contains('filled')) set('amount', dl(D.amount));
-      if (fieldEls.date.classList.contains('filled')) set('date', dl(D.date));
-      const txt = $('.cat .cat__txt', fieldEls.cat);
-      if (txt && fieldEls.cat.classList.contains('filled')) txt.textContent = dl(D.cat);
-      $$('li', feed).forEach(uzupelnijWpis);
-    }
+    const D = DOC[docKind];
+    if (fieldEls.store.classList.contains('filled')) set('store', dl(D.store));
+    if (fieldEls.amount.classList.contains('filled')) set('amount', dl(D.amount));
+    if (fieldEls.date.classList.contains('filled')) set('date', dl(D.date));
+    const txt = $('.cat .cat__txt', fieldEls.cat);
+    if (txt && fieldEls.cat.classList.contains('filled')) txt.textContent = dl(D.cat);
+    $$('li', feed).forEach(uzupelnijWpis);
   });
 
   /* ── 6. Koło kategorii ───────────────────────────────────────────── */

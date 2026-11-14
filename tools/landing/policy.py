@@ -22,7 +22,7 @@ TPL = """<!DOCTYPE html>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Skarbio — Privacy policy</title>
-<meta name="description" content="Skarbio keeps every record on your device. No account, no cloud, no analytics; the only optional network call is a NIP lookup in the Polish VAT registry." />
+<meta name="description" content="Read how Skarbio stores records on your device and how it uses Google ML Kit and the optional Polish VAT registry lookup." />
 <link rel="canonical" href="https://techparka.github.io/skarbio/privacy-policy.html" />
 <link rel="icon" href="assets/favicon.png" sizes="48x48" />
 <meta name="theme-color" content="#080D1A" media="(prefers-color-scheme: dark)" />
@@ -52,7 +52,7 @@ TPL = """<!DOCTYPE html>
 </header>
 <main class="section" id="main">
   <div class="wrap">
-    <p class="prose__tldr"><b>W skrócie po polsku:</b> wszystkie dane zostają w telefonie. Nie ma konta, chmury ani analityki, a jedyne opcjonalne zapytanie sieciowe to sprawdzenie numeru NIP w publicznym rejestrze VAT — domyślnie wyłączone. Pełna treść poniżej, po angielsku.</p>
+    <p class="prose__tldr"><b>W skrócie po polsku:</b> historia wydatków jest zapisana na urządzeniu. Skanowanie używa Google ML Kit. Sprawdzanie NIP w rejestrze VAT jest opcjonalne i domyślnie wyłączone. Poniżej znajdziesz wersję angielską i polską.</p>
     <article class="prose">{body}</article>
   </div>
 </main>

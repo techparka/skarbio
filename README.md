@@ -68,7 +68,7 @@ A signed release build requires a local `keystore.properties` file. The expected
 
 ## Privacy
 
-Skarbio stores transactions, bills, and account data in a local Room database. The app has no sign-up, cloud sync, ads, or analytics. Receipt text recognition runs on the device. Google Play services may need to download the OCR model and document scanner components before the first scan. See the ML Kit guides for [text recognition](https://developers.google.com/ml-kit/vision/text-recognition/v2/android) and the [document scanner](https://developers.google.com/ml-kit/vision/doc-scanner/android).
+Skarbio stores transactions, bills, and account data in a local Room database. The app has no sign-up, cloud sync, ads, or its own usage analytics. Receipt text recognition runs on the device. Google Play services may need to download the OCR model and document scanner components before the first scan. See the ML Kit guides for [text recognition](https://developers.google.com/ml-kit/vision/text-recognition/v2/android) and the [document scanner](https://developers.google.com/ml-kit/vision/doc-scanner/android). Google may collect diagnostic and usage metrics as described in its [ML Kit data disclosure](https://developers.google.com/ml-kit/android-data-disclosure).
 
 The optional store-name lookup sends the receipt's tax ID (NIP) to Poland's public VAT registry. The setting is off by default. See the [full privacy policy](https://techparka.github.io/skarbio/privacy-policy.html).
 

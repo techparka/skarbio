@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Skarbio — Privacy policy</title>
-<meta name="description" content="Skarbio keeps every record on your device. No account, no cloud, no analytics; the only optional network call is a NIP lookup in the Polish VAT registry." />
+<meta name="description" content="Read how Skarbio stores records on your device and how it uses Google ML Kit and the optional Polish VAT registry lookup." />
 <link rel="canonical" href="https://techparka.github.io/skarbio/privacy-policy.html" />
 <link rel="icon" href="assets/favicon.png" sizes="48x48" />
 <meta name="theme-color" content="#080D1A" media="(prefers-color-scheme: dark)" />
@@ -34,14 +34,14 @@
 </header>
 <main class="section" id="main">
   <div class="wrap">
-    <p class="prose__tldr"><b>W skrócie po polsku:</b> wszystkie dane zostają w telefonie. Nie ma konta, chmury ani analityki, a jedyne opcjonalne zapytanie sieciowe to sprawdzenie numeru NIP w publicznym rejestrze VAT — domyślnie wyłączone. Pełna treść poniżej, po angielsku.</p>
+    <p class="prose__tldr"><b>W skrócie po polsku:</b> historia wydatków jest zapisana na urządzeniu. Skanowanie używa Google ML Kit. Sprawdzanie NIP w rejestrze VAT jest opcjonalne i domyślnie wyłączone. Poniżej znajdziesz wersję angielską i polską.</p>
     <article class="prose"><h1>Privacy Policy for Skarbio</h1>
-<p class="updated"><em>Last updated: March 7, 2026</em></p>
+<p class="updated"><em>Last updated: November 14, 2026</em></p>
 
 <h2>1. Introduction</h2>
 <p>Skarbio ("the App") is a personal finance and expense tracking application for Android. This Privacy Policy explains how the App handles your information.</p>
 <div class="short-version">
-    <strong>The short version:</strong> Skarbio stores all your data locally on your device. We do not collect, transmit, or share any personal data.
+    <strong>The short version:</strong> Skarbio stores your financial records on your device. See the sections on the optional VAT lookup and Google ML Kit for details about network activity.
 </div>
 
 <h2>2. Data We Do NOT Collect</h2>
@@ -56,7 +56,7 @@
 </ul>
 
 <h2>3. Data Stored Locally on Your Device</h2>
-<p>All data you enter into Skarbio (transactions, bills, budgets, account balances, categories, settings) is stored exclusively in a local database on your device using Android Room (SQLite). This data never leaves your device and is not accessible to the developer or any third party.</p>
+<p>All data you enter into Skarbio (transactions, bills, budgets, account balances, categories, settings) is stored exclusively in a local database on your device using Android Room (SQLite). Skarbio does not sync these records to a server. You can export or back them up to a location you choose.</p>
 
 <h2>4. Camera and Gallery Permission</h2>
 <p>Skarbio requests access to your camera and photo gallery solely for the purpose of scanning receipts and invoices. Photos are processed entirely on-device using Google ML Kit's on-device OCR (text recognition). No images are uploaded to any server — all processing happens locally.</p>
@@ -72,13 +72,13 @@
 
 <h2>8. Third-Party Services</h2>
 <ul>
-    <li><strong>Google ML Kit (on-device)</strong> — Used for text recognition on receipts and invoices. All processing happens locally on your device. For more information, see <a href="https://developers.google.com/ml-kit/terms">Google ML Kit Terms</a>.</li>
+    <li><strong>Google ML Kit (on-device)</strong> — Used for text recognition on receipts and invoices. Document scanning and text recognition run on your device. Google Play services may download the OCR model and scanner components before first use. Google may collect ML Kit diagnostic and usage metrics, such as device information and performance data. See <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google’s ML Kit data disclosure</a> and <a href="https://developers.google.com/ml-kit/terms">Google ML Kit Terms</a>.</li>
     <li><strong>Polish VAT Registry API</strong> (optional, opt-in) — Public government API used only for store name lookup by NIP number.</li>
 </ul>
-<p>Skarbio does not integrate any advertising, analytics, or tracking SDKs.</p>
+<p>Skarbio includes no advertising SDK and does not run its own usage analytics.</p>
 
 <h2>9. Internet Permission</h2>
-<p>The App requests the INTERNET permission solely for the optional VAT Registry lookup feature described above. If you do not enable this feature, no network requests are made.</p>
+<p>The App requests the INTERNET permission solely for the optional VAT Registry lookup feature described above. Google Play services handles ML Kit downloads and related SDK network activity separately.</p>
 
 <h2>10. Data Security</h2>
 <p>Your data is stored in a standard Android SQLite database protected by your device's own security mechanisms (screen lock, encryption). Backups can optionally be encrypted with AES-256. The developer has no access to any of your data.</p>
@@ -96,14 +96,14 @@
 <hr>
 
 <h2 class="prose__lang">Polityka Prywatności — Skarbio</h2>
-<p class="updated"><em>Ostatnia aktualizacja: 7 marca 2026</em></p>
+<p class="updated"><em>Ostatnia aktualizacja: 14 listopada 2026</em></p>
 
 <div class="short-version">
-    <strong>W skrócie:</strong> Skarbio przechowuje wszystkie dane wyłącznie lokalnie na Twoim urządzeniu. Nie zbieramy, nie przesyłamy ani nie udostępniamy żadnych danych osobowych.
+    <strong>W skrócie:</strong> Skarbio przechowuje historię wydatków na Twoim urządzeniu. Informacje o połączeniach sieciowych znajdziesz w sekcjach o rejestrze VAT i Google ML Kit.
 </div>
 
 <h3>1. Dane przechowywane lokalnie</h3>
-<p>Wszystkie transakcje, rachunki, budżety, konta i ustawienia są zapisywane wyłącznie w lokalnej bazie danych SQLite na Twoim telefonie. Dane nigdy nie opuszczają Twojego urządzenia.</p>
+<p>Wszystkie transakcje, rachunki, budżety, konta i ustawienia są zapisywane wyłącznie w lokalnej bazie danych SQLite na Twoim telefonie. Skarbio nie synchronizuje tych danych z serwerem. Możesz je wyeksportować lub zapisać kopię w wybranym miejscu.</p>
 
 <h3>2. Aparat i galeria</h3>
 <p>Aplikacja używa aparatu i galerii wyłącznie do skanowania paragonów i faktur. Zdjęcia są przetwarzane na urządzeniu za pomocą Google ML Kit OCR i nie są nigdzie przesyłane.</p>
@@ -118,7 +118,7 @@
 <p>Aplikacja może wysyłać lokalne powiadomienia o zbliżających się terminach płatności. Powiadomienia generowane są całkowicie na urządzeniu, bez zewnętrznych serwisów push.</p>
 
 <h3>6. Usługi zewnętrzne</h3>
-<p>Skarbio nie zawiera żadnych SDK reklamowych, analitycznych ani śledzących.</p>
+<p>Skarbio nie zawiera SDK reklamowych ani nie prowadzi własnej analityki. Przed pierwszym skanem Usługi Google Play mogą pobrać model OCR i komponenty skanera. Google może zbierać dane diagnostyczne i statystyki użycia ML Kit, takie jak informacje o urządzeniu i wydajności. Szczegóły opisuje <a href="https://developers.google.com/ml-kit/android-data-disclosure?hl=pl">dokumentacja Google ML Kit</a>.</p>
 
 <h3>7. Kontakt</h3>
 <p><strong>Email:</strong> skarbio.dev@gmail.com</p></article>
