@@ -58,3 +58,10 @@ google-services.json
 # Claude Code local config
 .claude/
 .claude-history/
+
+# Narzędzia strony startowej (generowanie assetów, audyt, zrzuty QA)
+tools/landing/shots/
+__pycache__/
+
+# Wyniki audytów i pomiarów strony (generowane)  (nie w repo)
+tools/landing/beauty.json
