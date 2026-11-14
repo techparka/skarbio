@@ -55,6 +55,11 @@
     'feat.eyebrow': 'Co jest w środku',
     'feat.h2': 'Codzienne wydatki pod kontrolą',
     'feat.1t': 'Paragony i faktury',
+    'feat.scan.title': 'Paragon',
+    'feat.scan.item1': 'Chleb <b>6,49</b>',
+    'feat.scan.item2': 'Mleko <b>3,29</b>',
+    'feat.scan.item3': 'Kawa <b>28,99</b>',
+    'feat.scan.total': 'Razem <b>38,77 zł</b>',
     'feat.1d': 'Zeskanuj zdjęcie lub wczytaj PDF. Sprawdź sprzedawcę, kwotę i datę przed zapisem. Skarbio ostrzega o możliwych duplikatach paragonów.',
     'feat.2t': 'Automatyczny dobór kategorii',
     'feat.2d': 'Skarbio korzysta z 220 polskich słów kluczowych, żeby podpowiedzieć kategorię. Rozpoznaje też nazwy sklepów z literówkami.',
@@ -565,11 +570,24 @@
 
   const lb = $('#lightbox'), lbImg = $('#lb-img'), lbCap = $('#lb-cap');
   let lbIdx = 0;
+  const heroImage = $('#hero-device img');
+  const isLight = () => root.dataset.theme === 'light';
+  function updateScreenshots() {
+    heroImage.src = `screenshots/dashboard-hero${isLight() ? '-light' : ''}.webp`;
+    shots.forEach(shot => {
+      const base = shot.dataset.full.slice(0, -4);
+      $('img', shot).src = `${base}${isLight() ? '-light' : ''}.webp`;
+    });
+    if (lb.open) openLb(lbIdx);
+  }
+  updateScreenshots();
+  new MutationObserver(updateScreenshots).observe(root, { attributeFilter: ['data-theme'] });
+
   function openLb(i) {
     lbIdx = (i + shots.length) % shots.length;
     const s = shots[lbIdx];
     const cap = s.querySelector('.shot__cap').textContent;
-    lbImg.src = s.dataset.full;
+    lbImg.src = isLight() ? `${s.dataset.full.slice(0, -4)}-light-full.webp` : s.dataset.full;
     lbImg.alt = s.querySelector('img').alt;
     lbCap.textContent = cap;
     if (!lb.open) lb.showModal();

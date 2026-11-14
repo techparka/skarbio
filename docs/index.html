@@ -24,7 +24,7 @@
 <link rel="preload" href="assets/fonts/SpaceGrotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="assets/fonts/SpaceGrotesk-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="stylesheet" href="assets/fonts/fonts.css" />
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css?v=20261114-3" />
 
 <script>
   /* Ustaw motyw przed pierwszym malowaniem, żeby nie było błysku. */
@@ -303,12 +303,14 @@
           <div class="card__icon"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7.5A1.5 1.5 0 0 1 5.5 6h1.9l1.1-1.8h6L15.6 6h2.9A1.5 1.5 0 0 1 20 7.5v10A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5v-10Z" /><circle cx="12" cy="12.5" r="3.2" /></svg></div>
           <h3 data-i18n="feat.1t">Receipts &amp; invoices</h3>
           <p data-i18n="feat.1d">Scan a photo or import a PDF. Review the vendor, amount, and date before saving. Skarbio warns about possible duplicate receipts.</p>
-          <div class="card__art ui ui--scan" aria-hidden="true">
-            <span class="ui__frame"></span>
-            <span class="ui__line" style="--w:56%"></span>
-            <span class="ui__line" style="--w:38%"></span>
-            <span class="ui__line" style="--w:66%"></span>
-            <span class="ui__chip">12.06 · 58,40 zł</span>
+          <div class="card__art ui--scan" aria-hidden="true">
+            <div class="scan-slip">
+              <b data-i18n="feat.scan.title">Receipt</b>
+              <span data-i18n="feat.scan.item1">Bread <b>6.49</b></span>
+              <span data-i18n="feat.scan.item2">Milk <b>3.29</b></span>
+              <span data-i18n="feat.scan.item3">Coffee <b>28.99</b></span>
+              <span class="scan-slip__total" data-i18n="feat.scan.total">Total <b>PLN 38.77</b></span>
+            </div>
           </div>
         </article>
 
@@ -568,6 +570,6 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="app.js?v=20261114-2" defer></script>
+<script src="app.js?v=20261114-3" defer></script>
 </body>
 </html>
