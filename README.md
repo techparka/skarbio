@@ -1,220 +1,90 @@
 <div align="center">
 
-<img src="docs/assets/logo.png" width="96" alt="Skarbio logo" />
+<img src="docs/assets/logo-96.png" width="96" height="96" alt="Skarbio logo" />
 
 # Skarbio
 
-**Your private, 100% offline expense tracker for Android.**
-Scan receipts and invoices with on-device OCR, track multiple accounts, set budgets, and see where your money goes — no cloud, no account, no tracking.
+**A private expense tracker for Android with on-device receipt scanning.**
 
-[![Platform](https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white)](https://developer.android.com)
-[![Language](https://img.shields.io/badge/language-Kotlin-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org)
-[![Min SDK](https://img.shields.io/badge/minSdk-24%20(Android%207.0)-blue)](#requirements)
-[![License](https://img.shields.io/badge/license-Proprietary-lightgrey)](#license)
+Scan a receipt, assign it to a category, and see how much of your monthly budget is left. Skarbio stores expenses, accounts, and bills locally and needs no sign-up.
 
-[Features](#features) · [Screenshots](#screenshots) · [Tech stack](#tech-stack) · [Getting started](#getting-started) · [Privacy](#privacy)
+[Try the interactive scan demo](https://techparka.github.io/skarbio/#demo) · [Build from source](#getting-started) · [Privacy policy](https://techparka.github.io/skarbio/privacy-policy.html)
 
 </div>
 
----
-
-## Why Skarbio
-
-Most budgeting apps want your bank login, your email, or a subscription. Skarbio doesn't. It runs entirely on your device: OCR, parsing, storage, backups — all local. There is no server, no account, and no network permission required for the app to function.
+Skarbio supports Android 7.0 and later (API 24). Build it from this repository to install it. There is currently no published APK or Google Play release.
 
 ## Features
 
-### 📸 Receipt scanning
-- Capture with the camera or import from gallery / PDF
-- Fully offline OCR (Google ML Kit Text Recognition) extracts store, amount and date
-- Automatic categorization powered by a 500+ merchant keyword database
-- Duplicate detection so you never log the same receipt twice
-
-### 🧾 Invoice scanning
-- Import PDF invoices from file or gallery
-- Auto-extracts vendor, amount, due date and invoice number
-- Installment forecasting for recurring bills (utilities, telecom) — pick which installments to save as future bills
-- Warnings for stale invoices and missed due dates
-
-### 💳 Multi-account
-- Multiple accounts (checking / savings) with custom emoji and color
-- Transfers between accounts
-- Combined balance across all accounts on the dashboard
-
-### 💰 Transactions
-- Expenses, income and transfers in one unified list
-- Grouped by date, filterable by category and month
-- Search by merchant/source, edit and delete with undo
-
-### 🧾 Bills
-- Full CRUD for recurring bills: electricity, internet, rent, phone, etc.
-- Status tracking: unpaid / paid / overdue
-- Recurrence: monthly, quarterly, semi-annual, yearly
-- Push reminders X days before the due date (WorkManager)
-
-### 💹 Dashboard
-- Monthly summary: income / expenses / net result
-- Interactive pie chart — double-tap a slice to jump to that category's transactions
-- Account balance switcher (net result / total balance / specific account)
-- Budget alerts for categories approaching their limit
-
-### 📊 Reports
-- Bar chart of spending trends (last 6 months)
-- Category comparison: current vs. previous month
-- Top merchants by spend
-
-### 📋 Budgets
-- Monthly spending limit per category
-- Progress bar with percentage used
-- Alerts at 80% and 100% of budget
-
-### 💾 Backup & restore
-- Full database export to a single `.skb` file
-- Optional AES-256-GCM encryption (PBKDF2, 100,000 iterations)
-- Password-verified restore
-
-### 📤 CSV import / export
-- Export all transactions and bills to CSV (UTF-8 BOM — opens correctly in Excel)
-- Import transactions back from a CSV file
-
-### ⚙️ Settings
-- Currency: PLN / EUR / USD
-- Theme: light / dark / system
-- Language: Polish / English / system (per-app locale, Android 13+)
-- Biometric app lock
+- **Receipts and invoices.** Scan paper documents, import images, or open PDFs in Skarbio. Review extracted amounts and dates before saving. Receipt scanning warns about possible duplicates.
+- **Categories and budgets.** Skarbio suggests categories using 220 Polish merchant keywords and fuzzy matching. Set monthly limits by category and see a dashboard alert starting at 80% of the limit.
+- **Accounts and transactions.** Track expenses, income, and transfers across accounts. Browse transaction history and see monthly balances, spending trends, and top merchants.
+- **Bills and reminders.** Track due dates and payment status, schedule recurring bills or installments, and enable reminders before bills are due.
+- **Import, export, and backups.** Import transactions from CSV, export transactions and bills to CSV, or back up the database in a `.skb` file with optional password-based encryption.
+- **Personalization.** Use PLN, EUR, or USD, switch between Polish and English, choose a light or dark theme, and enable app lock.
 
 ## Screenshots
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/dashboard.png" width="220" alt="Dashboard" /></td>
-    <td><img src="docs/screenshots/history.png" width="220" alt="Transaction history" /></td>
-    <td><img src="docs/screenshots/accounts.png" width="220" alt="Accounts" /></td>
+    <td align="center"><img src="docs/screenshots/dashboard.webp" width="200" alt="Monthly dashboard with balances and spending" /><br />Dashboard</td>
+    <td align="center"><img src="docs/screenshots/history.webp" width="200" alt="Transaction history grouped by date" /><br />History</td>
+    <td align="center"><img src="docs/screenshots/accounts.webp" width="200" alt="Account balances" /><br />Accounts</td>
   </tr>
   <tr>
-    <td align="center">Dashboard</td>
-    <td align="center">History</td>
-    <td align="center">Accounts</td>
-  </tr>
-  <tr>
-    <td><img src="docs/screenshots/budgets.png" width="220" alt="Budgets" /></td>
-    <td><img src="docs/screenshots/reports.png" width="220" alt="Reports" /></td>
-    <td><img src="docs/screenshots/calendar.png" width="220" alt="Calendar" /></td>
-  </tr>
-  <tr>
-    <td align="center">Budgets</td>
-    <td align="center">Reports</td>
-    <td align="center">Calendar</td>
+    <td align="center"><img src="docs/screenshots/budgets.webp" width="200" alt="Monthly category budgets with progress bars" /><br />Budgets</td>
+    <td align="center"><img src="docs/screenshots/reports.webp" width="200" alt="Spending reports and monthly comparisons" /><br />Reports</td>
+    <td align="center"><img src="docs/screenshots/calendar.webp" width="200" alt="Calendar with bills and daily spending" /><br />Calendar</td>
   </tr>
 </table>
 
-More screenshots and a project overview: **[skarbio landing page →](https://techparka.github.io/skarbio/)**
-
-## Tech stack
-
-| Layer | Technology |
-|---|---|
-| Language | Kotlin |
-| UI | XML ViewBinding + Fragments |
-| Architecture | MVVM + Kotlin Flow / StateFlow |
-| DI | Hilt |
-| Database | Room (6 tables) |
-| OCR | ML Kit Text Recognition (on-device) |
-| Document scanning | ML Kit Document Scanner |
-| Charts | MPAndroidChart |
-| Async | Kotlin Coroutines + Flow |
-| Background work | WorkManager |
-| Encryption | `javax.crypto` — AES-256-GCM, PBKDF2WithHmacSHA256 |
-| PDF parsing | PdfBox-Android |
-
-### Database schema
-
-| Table | Purpose |
-|---|---|
-| `transactions` | Expenses, income, transfers |
-| `bills` | Bills / invoices |
-| `accounts` | User accounts |
-| `categories` | System + custom categories |
-| `budgets` | Monthly limits per category |
-| `settings` | Key-value app settings |
-
-### Project structure
-
-```
-app/src/main/java/com/budgetapp/ocr/
-├── backup/              # BackupManager (AES-256-GCM)
-├── data/
-│   ├── local/           # Room database, DAOs, entities
-│   ├── model/           # Shared enums/models
-│   └── repository/      # Repositories
-├── di/                  # Hilt modules
-├── export/              # CSV import
-├── service/             # Duplicate detection
-├── ui/
-│   ├── bills/           # Invoice scanning & bill management
-│   ├── budget/          # Budgets
-│   ├── dashboard/       # Dashboard
-│   ├── finance/accounts/# Accounts & transfers
-│   ├── reports/         # Accounts | Budgets | Reports tabs
-│   ├── scan/            # Receipt scanning
-│   ├── settings/        # Settings & categories
-│   └── transactions/    # Transaction history
-├── util/                # Helpers (image hashing, currency formatting, locale data)
-├── BillReminderWorker.kt
-├── CategoryManager.kt   # 500+ merchant keyword database
-├── InvoiceParser.kt     # PDF invoice parsing
-└── ReceiptTextRecognizer.kt
-```
+[Open the full-size gallery](https://techparka.github.io/skarbio/#screens)
 
 ## Getting started
 
 ### Requirements
 
-- Android Studio Hedgehog (2023.1.1) or newer
-- JDK 17
-- Android SDK, min API 24 (Android 7.0) / target API 35
+- Android Studio with Gradle set to use JDK 17
+- Android SDK Platform 35
+- A device or emulator running Android 7.0 (API 24) or later. Use a device or emulator with Google Play services for ML Kit scanning.
 
-### Build from source
+### Build and run
 
 ```bash
 git clone https://github.com/techparka/skarbio.git
 cd skarbio
 ```
 
-Open the project folder in Android Studio and let it sync Gradle, or build from the command line:
+Open the project in Android Studio, let Gradle sync, select a device or emulator, and choose **Run**. This also works on Windows.
+
+From a Bash shell with the Android SDK configured, you can build and install a debug APK as follows.
 
 ```bash
-# Debug APK
-./gradlew assembleDebug
-
-# Unit tests
-./gradlew test
-```
-
-The debug APK is written to `app/build/outputs/apk/debug/`. Install it on a connected device or emulator running API 24+:
-
-```bash
+bash ./gradlew assembleDebug
 adb install app/build/outputs/apk/debug/app-debug.apk
 ```
 
-> Release builds require a signing configuration (`keystore.properties`) that is not included in this repository — see `app/build.gradle` for the expected format.
+A signed release build requires a local `keystore.properties` file. The expected fields are listed in [app/build.gradle](app/build.gradle).
 
 ## Privacy
 
-**All data stays on your device.** Skarbio does not require an internet connection to function, does not send data to any server, and does not collect analytics. OCR runs 100% offline via ML Kit.
+Skarbio stores transactions, bills, and account data in a local Room database. The app has no sign-up, cloud sync, ads, or analytics. Receipt text recognition runs on the device. Google Play services may need to download the OCR model and document scanner components before the first scan. See the ML Kit guides for [text recognition](https://developers.google.com/ml-kit/vision/text-recognition/v2/android) and the [document scanner](https://developers.google.com/ml-kit/vision/doc-scanner/android).
 
-The only network call in the app is an optional, unauthenticated lookup against Poland's public VAT registry (`wl-api.mf.gov.pl`) to resolve a company name from a NIP tax ID — no API key, no personal data sent beyond the NIP itself.
+The optional store-name lookup sends the receipt's tax ID (NIP) to Poland's public VAT registry. The setting is off by default. See the [full privacy policy](https://techparka.github.io/skarbio/privacy-policy.html).
 
-Full privacy policy: [`privacy-policy.html`](privacy-policy.html)
+## Tech stack
+
+| Area | Implementation |
+| --- | --- |
+| Android UI | Kotlin, XML layouts, ViewBinding, Fragments |
+| Architecture | MVVM, Coroutines, Flow, Hilt |
+| Local storage | Room / SQLite with seven tables |
+| Document processing | ML Kit Text Recognition, ML Kit Document Scanner, CameraX, PdfBox-Android |
+| Charts and reminders | MPAndroidChart, WorkManager |
+| Password-protected backups | AES-256-GCM, PBKDF2-HMAC-SHA256 with 100,000 iterations |
+
+The Room schema is defined in [AppDatabase.kt](app/src/main/java/com/budgetapp/ocr/data/local/AppDatabase.kt), and the backup format is implemented in [BackupManager.kt](app/src/main/java/com/budgetapp/ocr/backup/BackupManager.kt).
 
 ## License
 
-This project is currently unlicensed / all rights reserved. Source is shared for portfolio and reference purposes.
-
----
-
-<div align="center">
-
-Built with [Claude Code](https://claude.ai/code)
-
-</div>
+The source is publicly viewable. All rights reserved.
