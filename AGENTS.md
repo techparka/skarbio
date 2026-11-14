@@ -95,15 +95,17 @@ Nie usuwaj ich jako „martwych” — bramka układu i przyszłe motywy czepiaj
   stan po zapisie, otwarty lightbox), nie tylko na martwej stronie.
 - **Wszystkie liczby stylistyczne bior z tokenów `docs/styles.css`**: `--t-*` (9 stopni
   pisma), `--s-*` (odstępy, wszystkie wielokrotne 4 px), `--r-*` (zaokrąglenia), `--d-*` i
-  `--ease*` (ruch). Nowa wartoś spoza skali to cofnięcie: `beauty.py` liczy wtedy kolejne
+  `--ease*` (ruch). Nowa wartość spoza skali to cofnięcie: `beauty.py` liczy wtedy kolejne
   „źle”. Reguła jest w obie strony — jeśli skali brakuje, uzupełnij token, nie wklejaj
   literału.
+- **Kropki pod taśmą zrzutów to STRONY, a nie zdjęcia.** `docs/app.js`: `liczenieStron()` liczy realne położenia `scrollLeft` (zwiększone o pełną szerokość telefonu) i odrzuca te, które miernik pokaże w tym samym miejscu. Na 1440 px sześć telefonów daje trzy strony, na 390 px sześć. Gdyby kropek znowu było sześć na szerokim ekranie, kliknięcie nie przesunie paska ani o piksel (cały zasięg to ~240 px) i użytkownik zobaczy martwy interfejs. Taśma `ul.rail` bierze szerokość `min(100% - 2 * var(--gutter), var(--wrap))`, żeby jej lewa krawędź zgadzała się z nagłówkiem sekcji; maska (`mask-image`) tnie także cień okładający telefon, więc ją odrzuciłem.
+- **Puste pole demo to puste węzły**, a nie myślnik włożony przez `clearFields()`: kreskę rysuje `:empty::after`. Kiedy JS nadpisuje `innerHTML` wartością, nadpisuje też etykietę pola (dlatego w znaczniku jest `<span>Etykieta</span><b class="val"></b>`, a `pole()` zastępuje tylko `.val`). Reset i zmiana dokumentu muszą wywalić odłożone `setTimeout` skanu (`anulujSkan()`), inaczej urwany w połowie skan dociąga wartość do wyczyszczonego pola.
 - **Pomiar w przeglądarce musi przewijać natychmiast**: `scrollTo({behavior:'instant'})`,
   `scrollIntoView({behavior:'instant'})`. Strona ma `scroll-behavior: smooth`, więc zwykłe
   `scrollTo(0, y)` animuje, a próbka mierzy element, który *dopiero podleci* na swoje
   miejsce — tak powstają fałszywe kolizje i „martwe” `:hover`. Po przewinięciu odczekaj
   ~350 ms, aż dojdą `reveal`.
-- **Klawiatura: pierścień widoczny, fokus nie ucieka.** `beauty.py` przechodzi stronę klawiszem `Tab` (53 zatrzymania) i sprawdza trzy rzeczy: każdy punkt ma nazwę dostępną (również gdy wejście jest wewnątrz `<label>`, nie tylko przy `label[for]`), pierścień nie chowa się pod przyklejonym paskiem i żdnce przejście nie wpada na `<body>`. Realna pułapka: `scanBtn.disabled = true` w fazie `reading` wyrzucało fokus z przycisku, który właśnie obsługuje klawiatura — teraz to `.is-waiting` + `aria-disabled`, a logika i tak ma `if (phase === "reading") return`. „Przejdź do treści” wyskakuje POD paskiem (`top: 88px`), bo nad nim nachodził na logo. Po każdym `Tab` odczekaj i potwierdź, że `scrollY` oraz `top` elementu stanęły — przeglądarka przewija do fokusu z opóźnieniem.
+- **Klawiatura: pierścień widoczny, fokus nie ucieka.** `beauty.py` przechodzi stronę klawiszem `Tab` (53 zatrzymania) i sprawdza trzy rzeczy: każdy punkt ma nazwę dostępną (również gdy wejście jest wewnątrz `<label>`, nie tylko przy `label[for]`), pierścień nie chowa się pod przyklejonym paskiem i żadne przejście nie wpada na `<body>`. Realna pułapka: `scanBtn.disabled = true` w fazie `reading` wyrzucało fokus z przycisku, który właśnie obsługuje klawiatura — teraz to `.is-waiting` + `aria-disabled`, a logika i tak ma `if (phase === "reading") return`. „Przejdź do treści” wyskakuje POD paskiem (`top: 88px`), bo nad nim nachodził na logo. Po każdym `Tab` odczekaj i potwierdź, że `scrollY` oraz `top` elementu stanęły — przeglądarka przewija do fokusu z opóźnieniem.
 - Stan czynny (`aria-current`, `.is-on`) nie musi reagować na `:hover`; odnośnik w tekście
   musi być widoczny (kolor + podkreślenie) — globalne `a { color: inherit }` ich nie widać
   na stronie polityki, stąd `.prose a`.
